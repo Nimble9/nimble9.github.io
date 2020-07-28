@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
-    {% if page.title or page.title == 'me' %}
+    {% if page.title or page.title %}
         <title>{{ page.title }}</title>
 		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
     {% else %}
@@ -23,20 +23,26 @@
 		<div class="default_title">
 			<img src="/assets/img/mycomputer.png" />
 			{% if page.tag %}
-				<h1>{{ page.tag }}</h1>
+				<h1>{{ page.heading }}</h1>
 			{% else %}
-				<h1>{{ site.name }}</h1>
+<!--				<h1>{{ site.name }}</h1>-->
+				<h1>nimble9</h1>
 			{% endif %}
+
 		</div>
 		{% include topbar.html %}
 		<div class="tag_list">
 			<ul id="tag-list">
 				<li><a href="/" ><img src="/assets/img/disk.png" />(C:)</a>
 			<ul>
-				{% assign tags = site.tags | sort %}
-				{% for tag in tags %}
-				<li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/folder.ico" />{{ tag[0] | replace:'-', ' ' }}</a></li>
-				{% endfor %}
+<!--				{% assign tags = site.tags | sort %}-->
+<!--				{% for tag in tags %}-->
+<!--				<li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/folder.ico" />{{ tag[0] | replace:'-', ' ' }}</a></li>-->
+<!--				{% endfor %}-->
+				<li><a href="/works/2020"><img src="/assets/img/folder.ico" alt="">2020</a></li>
+				<li><a href="/works/2019"><img src="/assets/img/folder.ico" alt="">2019</a></li>
+				<li><a href="/works/2018"><img src="/assets/img/folder.ico" alt="">2018</a></li>
+				<li><a href="/works/2017"><img src="/assets/img/folder.ico" alt="">2017</a></li>
 			</ul>
 				</li>
 			</ul>
@@ -84,7 +90,7 @@
 			<div class="post_content">
         		{{ content }}
 				{% if page.title %}
-					{% include donate.html %}
+					{% include signature.html %}
 				{% endif %}
 			</div>
 		</div>
@@ -92,7 +98,7 @@
 	<script src="/assets/js/001.js"></script>
 	<script src="/assets/js/002.js"></script>
 	<div class="footer">
-		<p>Created by <a href="http://github.com/h01000110" target="_blank">h01000110 (hi)</a> | Code licensed under <a href="https://github.com/h01000110/h01000110.github.io/blob/master/LICENSE" target="_blank">MIT License</a></p>
+		<p>© nimble9.</p>
 	</div>
 </body>
 </html>
