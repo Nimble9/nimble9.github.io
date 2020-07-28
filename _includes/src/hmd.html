@@ -297,9 +297,9 @@
 
     .pdp-feature-11 .pdp-feature-area .feature-img { width: 1440px; height: 700px; }
 
-    .pdp-feature-11 .pdp-feature-area .feature-img img { position: absolute; z-index: 0; }
+    .pdp-feature-11 .pdp-feature-area .feature-img img { position: absolute; top: 0; opacity: 0; }
 
-    .pdp-feature-11 .pdp-feature-area .feature-img img.on { z-index: 1; }
+    .pdp-feature-11 .pdp-feature-area .feature-img img.on { opacity: 1; }
 
     .pdp-feature-11 .pdp-feature-area .slider { width: 370px; margin: auto; border: 3.5px solid #333; border-radius: 3px; position: relative; bottom: 30px; transition: all ease 0.75s; z-index: 3; background: #333; }
 
@@ -884,7 +884,7 @@
         </div>
         <div class="pdp-feature-area dynamic-area clearfix">
             <figure class="feature-img">
-                <img src="/assets/img/hmd/HMD360_1440xf1201.png" alt=""><img src="/assets/img/hmd/HMD360_1440xf1202.png" alt=""><img
+                <img src="/assets/img/hmd/HMD360_1440xf1201.png" class="on" alt=""><img src="/assets/img/hmd/HMD360_1440xf1202.png" alt=""><img
                     src="/assets/img/hmd/HMD360_1440xf1203.png" alt=""><img src="/assets/img/hmd/HMD360_1440xf1204.png" alt=""><img
                     src="/assets/img/hmd/HMD360_1440xf1205.png" alt=""><img src="/assets/img/hmd/HMD360_1440xf1206.png" alt=""><img
                     src="/assets/img/hmd/HMD360_1440xf1207.png" alt=""><img src="/assets/img/hmd/HMD360_1440xf1208.png" alt=""><img
@@ -925,7 +925,7 @@
                     src="/assets/img/hmd/HMD360_1440xf1277.png" alt=""><img src="/assets/img/hmd/HMD360_1440xf1278.png" alt=""><img
                     src="/assets/img/hmd/HMD360_1440xf1279.png" alt=""><img src="/assets/img/hmd/HMD360_1440xf1280.png" alt=""><img
                     src="/assets/img/hmd/HMD360_1440xf1281.png" alt=""><img src="/assets/img/hmd/HMD360_1440xf1282.png" alt=""><img
-                    src="/assets/img/hmd/HMD360_1440xf1283.png" class="on" alt=""><img src="/assets/img/hmd/HMD360_1440xf1284.png" alt=""><img
+                    src="/assets/img/hmd/HMD360_1440xf1283.png" alt=""><img src="/assets/img/hmd/HMD360_1440xf1284.png" alt=""><img
                     src="/assets/img/hmd/HMD360_1440xf1285.png" alt=""><img src="/assets/img/hmd/HMD360_1440xf1286.png" alt=""><img
                     src="/assets/img/hmd/HMD360_1440xf1287.png" alt=""><img src="/assets/img/hmd/HMD360_1440xf1288.png" alt=""><img
                     src="/assets/img/hmd/HMD360_1440xf1289.png" alt=""><img src="/assets/img/hmd/HMD360_1440xf1290.png" alt=""><img
@@ -1550,14 +1550,14 @@
                         }
                     }());
 
-                    var feature11 = (function() {
-                        var $ft11 = $(".pdp-feature-11");
-                        var $ft11Top = $($ft11).offset().top;
-
-                        if(scrollTop > $ft11Top) {
-                            didScroll3 = true;
-                        }
-                    }());
+                    // var feature11 = (function() {
+                    //     var $ft11 = $(".pdp-feature-11");
+                    //     var $ft11Top = $($ft11).offset().top;
+                    //
+                    //     if(scrollTop > $ft11Top) {
+                    //         didScroll3 = true;
+                    //     }
+                    // }());
 
                     var feature13 = (function() {
                         var $ft13 = $(".pdp-feature-13");
@@ -1847,7 +1847,7 @@
                     }());
 
                     var feature11 = (function() {
-                        var $img = $(".pdp-feature-11 .feature-img img");
+                        var $img = $(".pdp-feature-11 .dynamic-area .feature-img img");
                         var $src = $($img).attr("src");
                         var $val = $src.match(/1016_HMD360_\d{3}/g);
                         var num = 83;
@@ -1867,16 +1867,15 @@
 
                         $(".pdp-feature-11 .slider").slider({
                             range: "max",
-                            value: 90,
+                            value: 0,
                             min: 0,
-                            max: 109,
+                            max: 108,
                             slide: function(event, ui) {
-                                var _num = ui.value;
-                                if(_num % 2 === 0) {
-                                    $img.removeClass("on");
-                                    $img.eq(_num).addClass("on");
-                                }
-                                if(_num === 109) {
+                                var val = ui.value;
+                                $img.removeClass('on');
+                                $img.eq(val).addClass("on");
+
+                                if(val === 108) {
                                     $(".btn-wrapper").addClass("showed");
                                 } else {
                                     $(".btn-wrapper").removeClass("showed");
@@ -1924,8 +1923,6 @@
                                         $(".gallery-wrapper").hide();
                                         document.body.style.overflow = "visible";
                                     }
-
-
                                     return false;
                                 });
 
@@ -1951,39 +1948,40 @@
                                             return false;
                                         }
                                     });
+
+                                // $(".pdp-feature-11 .slider a").on('click', function(){
+                                //     $(this).trigger('click.omni');
+                                // });
+
+                                // setInterval(function() {
+                                //     if(didScroll3) {
+                                //         if(num < 109) {
+                                //             num++;
+                                //             // $($img).attr("src", $src.replace($val, "1016_HMD360_" + pad(num, 3)));
+                                //
+                                //             if(num % 2 === 0) {
+                                //                 $img.removeClass("on");
+                                //                 $img.eq(num).addClass("on");
+                                //             }
+                                //
+                                //             if(value < 109) {
+                                //                 value++;
+                                //                 $(".pdp-feature-11 .slider").slider("option", "value", value);
+                                //             }
+                                //
+                                //             if (value === 109) {
+                                //                 $(".btn-wrapper").addClass("showed");
+                                //             } else {
+                                //                 $(".btn-wrapper").removeClass("showed");
+                                //             }
+                                //         }
+                                //     }
+                                // }, 100);
                             }
                         }).on('mousedown touchstart', function(e){
                             $(this).find('a').blur();
                             e && e.preventDefault();
                         });
-                        $(".pdp-feature-11 .slider a").on('click', function(){
-                            $(this).trigger('click.omni');
-                        });
-
-                        setInterval(function() {
-                            if(didScroll3) {
-                                if(num < 109) {
-                                    num++;
-                                    // $($img).attr("src", $src.replace($val, "1016_HMD360_" + pad(num, 3)));
-
-                                    if(num % 2 === 0) {
-                                        $img.removeClass("on");
-                                        $img.eq(num).addClass("on");
-                                    }
-
-                                    if(value < 109) {
-                                        value++;
-                                        $(".pdp-feature-11 .slider").slider("option", "value", value);
-                                    }
-
-                                    if (value === 109) {
-                                        $(".btn-wrapper").addClass("showed");
-                                    } else {
-                                        $(".btn-wrapper").removeClass("showed");
-                                    }
-                                }
-                            }
-                        }, 100);
                     }());
 
                     var feature12 = (function() {
@@ -2035,9 +2033,9 @@
                             $(this).find('a').blur();
                             e && e.preventDefault();
                         });
-                        $(".pdp-feature-12 .slider a").on('click', function(){
-                            $(this).trigger('click.omni');
-                        });
+                        // $(".pdp-feature-12 .slider a").on('click', function(){
+                        //     $(this).trigger('click.omni');
+                        // });
                     }());
 
                 });
