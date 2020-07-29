@@ -157,7 +157,17 @@
 
     .pdp-feature-03 .pdp-feature-area .wide-area { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
 
-    .pdp-feature-03 .pdp-feature-area .wide-area .wide { position: absolute; background: url(/assets/img/hmd/pdp_feature_3-2.jpg) no-repeat center; background-size: cover; top: 0; left: 0; right: 0; bottom: 0; width: 63%; margin: auto; }
+    .pdp-feature-03 .pdp-feature-area .mask-box {width: 100%; height: 100%; position: relative; z-index: 10;}
+    .pdp-feature-03 .pdp-feature-area .mask-box .mask {width: 265px; height: 100%; background-color: black; position: absolute; transition: all linear 1.5s;}
+    .pdp-feature-03 .pdp-feature-area .mask-box .mask.mask-left {left: 0;}
+    .pdp-feature-03 .pdp-feature-area .mask-box .mask.mask-right {right: 0;}
+    .pdp-feature-03 .pdp-feature-area .mask-box.on .mask-left {left: -265px;}
+    .pdp-feature-03 .pdp-feature-area .mask-box.on .mask-right {right: -265px;}
+
+
+    /*.pdp-feature-03 .pdp-feature-area .wide-area:before {content: ''; position: absolute; display: block; top:0; bottom: 0; width: 265px; background-color: black; z-index: 10;}*/
+
+    .pdp-feature-03 .pdp-feature-area .wide-area .wide { position: absolute; background: url(/assets/img/hmd/pdp_feature_3-2.jpg) no-repeat center; background-size: cover; top: 0; left: 0; right: 0; bottom: 0; width:100%; margin: auto; }
 
     .pdp-feature-03 .pdp-feature-area .wide-area .degree { position: absolute; z-index: 1; color: #fff; font-size: 3.375em; top: 0; font-family: "SamsungSharpSans"; width: 100%; text-align: center; }
 
@@ -438,7 +448,12 @@
         .pdp-feature-09 .pdp-feature-area .btn-wrapper .translation-01 { top: 13.38366506520247vw; left: 23.67879203843514vw; }
         .pdp-feature-09 .pdp-feature-area .btn-wrapper .translation-02 { top: 2.059025394646534vw; left: 45.2299245024022vw; }
         .pdp-feature-09 .pdp-feature-area .btn-wrapper .translation-03 { top: 13.38366506520247vw; right: 26.69869595058339vw; }
-        .pdp-feature-11 .pdp-feature-area .feature-img { width: auto; height: 48.04392587508579vw; } }
+        .pdp-feature-11 .pdp-feature-area .feature-img { width: auto; height: 48.04392587508579vw; }
+
+        .pdp-feature-03 .pdp-feature-area .mask-box .mask {width: 18.18805765271105vw;}
+        .pdp-feature-03 .pdp-feature-area .mask-box.on .mask-left {left: -18.18805765271105vw;}
+        .pdp-feature-03 .pdp-feature-area .mask-box.on .mask-right {right: -18.18805765271105vw;}
+    }
 
     @media (max-width: 1380px) { .pdp-feature-03 .pdp-feature-area .wide-area .degree { font-size: 2.5em; top: 1%; } }
 
@@ -489,7 +504,7 @@
         .pdp-feature-01 .pdp-text-area .feature-copy { padding-bottom: 0; }
         .pdp-feature-02 .pdp-text-area .feature-copy { padding-bottom: 0; }
         .pdp-feature-03 .pdp-text-area .feature-copy { padding-bottom: 0; }
-        .pdp-feature-03 .pdp-feature-area .wide-area .wide { background: url(/assets/img/hmd/pdp_feature_3-2-m.jpg) no-repeat center; background-size: cover; width: 73%; }
+        .pdp-feature-03 .pdp-feature-area .wide-area .wide { background: url(/assets/img/hmd/pdp_feature_3-2-m.jpg) no-repeat center; background-size: cover; width: 100%; }
         .pdp-feature-03 .pdp-feature-area .wide-area .degree { top: 9%; font-size: 2.875em; }
         .pdp-feature-05 .pdp-feature-area .feature-img { width: 100%; padding: 0; }
         .pdp-feature-06 .pdp-feature-area .sound-img-wrapper span { width: 18.5%; top: 56%; left: 52%; }
@@ -517,7 +532,12 @@
         .pdp-feature-12 .pdp-feature-area .slider .ui-slider-handle { background: url(/assets/img/hmd/slider-trigger-m.png) no-repeat; background-size: contain; width: 0; height: 0; top: 0; padding: 16.45%; margin-left: -16.45%; margin-top: -16.45%; }
         .pdp-feature-14 .pdp-feature-area .table-area { overflow-x: scroll; }
         .pdp-feature-14 .pdp-feature-area .feature-table-wrapper { width: 200%; }
-        .pdp-feature-14 .pdp-feature-area .feature-table-wrapper thead th span { display: inline; } }
+        .pdp-feature-14 .pdp-feature-area .feature-table-wrapper thead th span { display: inline; }
+
+        .pdp-feature-03 .pdp-feature-area .mask-box .mask {width: 12.5vw; transition: all linear 1s;}
+        .pdp-feature-03 .pdp-feature-area .mask-box.on .mask-left {left: -12.5vw;}
+        .pdp-feature-03 .pdp-feature-area .mask-box.on .mask-right {right: -12.5vw;}
+    }
 
     @media (max-width: 680px) { .pdp-hmd-section .pdp-text-area { font-size: 0.9em; }
         .pdp-hmd-section .pdp-text-area .feature-copy { width: auto; padding-left: 10px; padding-right: 10px; }
@@ -1476,11 +1496,13 @@
 
                         if(scrollTop > $ft3Top) {
                             didScroll2 = true;
-                        } else if(scrollTop < $ft3Top - $ft3.height()) {
+                            document.querySelector('.mask-box').classList.add('on');
 
-                            $(".wide").css({
-                                width: size2 + "%"
-                            });
+                        } else if(scrollTop < $ft3Top - $ft3.height()) {
+                            document.querySelector('.mask-box').classList.remove('on');
+                            // $(".wide").css({
+                            //     width: size2 + "%"
+                            // });
                             $(".degree").text("Field of View " + count2.toFixed(0) +"°");
 
                             size2 = windowW<721?73:63;
@@ -1689,15 +1711,27 @@
                     }());
 
                     var feature3 = (function() {
+                        var elem = document.querySelector('.pdp-feature-03 .wide-area');
+                        elem.prepend(div('mask-box'));
+                        var mask = document.querySelector('.mask-box');
+                        mask.appendChild(div('mask mask-left'));
+                        mask.appendChild(div('mask mask-right'));
+
+                        function div (cn) {
+                            var div = document.createElement('div');
+                            if(cn) div.className = cn;
+                            return div;
+                        }
+
                         clearInterval(didDegree);
                         didDegree = setInterval(function() {
                             if(didScroll2) {
                                 if(size2 < 100) {
                                     size2 = size2 + 1;
                                     count2 = count2 + gop;
-                                    $(".wide").css({
-                                        width: size2 + "%"
-                                    });
+                                    // $(".wide").css({
+                                    //     width: size2 + "%"
+                                    // });
                                     $(".degree").text("Field of View " + count2.toFixed(0) +"°");
                                 }
                             }
@@ -1813,12 +1847,11 @@
                         }
 
                         $btn1.on("mouseenter focus", vidOn);
-                        $btn1.on("mouseleave blur", vidOff);
-
                         $btn2.on("mouseenter focus", vidOn);
-                        $btn2.on("mouseleave blur", vidOff);
-
                         $btn3.on("mouseenter focus", vidOn);
+
+                        $btn1.on("mouseleave blur", vidOff);
+                        $btn2.on("mouseleave blur", vidOff);
                         $btn3.on("mouseleave blur", vidOff);
 
                         $($btn1)
