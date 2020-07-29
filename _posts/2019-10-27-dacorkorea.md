@@ -1,5 +1,6 @@
 ---
 layout: default
+tag: tag2
 title: DacorKorea
 permalink: /portfolio/2019/dacorkorea/
 tags: tag2

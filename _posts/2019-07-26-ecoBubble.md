@@ -1,13 +1,14 @@
 ---
 layout: default
+tag: tag2
 title: ecoBubble
 permalink: /portfolio/2019/ecoBubble/
 tags: tag2
 ---
 # EcoBubble
 ### 클라이언트 : samsung.com
-### 카테고리 : Product Detail Page (PDP)
-### 작업기간 : 약 4주
+### 카테고리 : microsite
+### 작업기간 : 약 2주
 ### 작업환경 : nodejs / gulp / babel / AEM
 ### 사용기술 : HTML / SCSS / jQuery / Javascript
 ### 지원 브라우저 : 5대 브라우저(chrome, firefox, safari, opera, IE(~IE8))
