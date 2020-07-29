@@ -4,7 +4,7 @@ title: ecoBubble
 permalink: /portfolio/2019/ecoBubble/
 tags: tag2
 ---
-# Eco Bubble
+# EcoBubble
 ### 클라이언트 : samsung.com
 ### 카테고리 : Product Detail Page (PDP)
 ### 작업기간 : 약 4주
