@@ -6,6 +6,7 @@ function numbers () {
 	for (field in fields) {
 		var num = 0;
 		var select = fields[field].innerText;
+
 		var select_f = select.split(/\n/);
 		var tab = document.createElement("table");
 
@@ -48,4 +49,4 @@ function numbers () {
 	}
 }
 
-window.onload = numbers();
+// window.onload = numbers();
