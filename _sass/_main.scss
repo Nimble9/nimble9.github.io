@@ -304,6 +304,67 @@ ul.topbar {
 		word-break: break-word;
 	}
 }
+
+// nimble9
+.intro-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1.4;
+
+	.intro {
+		padding: 0 10px 0 5px;
+	}
+}
+
+.post {
+	padding: 10px;
+	line-height: 1.4;
+
+	.post-title {
+		display: none;
+	}
+}
+
+.profile {
+	width: 100%;
+	border: 1px solid #000;
+	th {
+		width: 25%;
+		border: 1px solid #000;
+		padding: 5px;
+		vertical-align: middle;
+		background-color: #eee;
+	}
+	td {
+		width: 75%;
+		border: 1px solid #000;
+		padding: 5px;
+	}
+}
+
+.signature {
+	padding: 10px;
+	display: flex;
+}
+
+.photo-wrapper {
+	.photo {
+		width: 150px;
+		height: 150px;
+		background-image: url('/assets/img/my.jpg');
+		background-size: 150%;
+		background-repeat: no-repeat;
+		//background-position: top -25px left 0px;
+		border-radius: 50%;
+		background-position: center;
+	}
+}
+.info-wrapper {
+	margin-left: 40px;
+}
+
+
 @media only screen and (max-width: 900px) {
     .content {
         width: 90%;
