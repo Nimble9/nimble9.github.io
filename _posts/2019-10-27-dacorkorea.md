@@ -7,7 +7,7 @@ tags: tag2
 ---
 # DacorKorea
 ### 클라이언트 : samsung.com
-### 카테고리 : Product Detail Page (PDP)
+### 카테고리 : 웹 사이트
 ### 작업기간 : 약 12주
 ### 작업환경 : nodejs / gulp
 ### 사용기술 : HTML / SCSS / jQuery / Javascript

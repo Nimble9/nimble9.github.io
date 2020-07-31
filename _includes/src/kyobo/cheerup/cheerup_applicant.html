@@ -1,0 +1,431 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>KYOBO 교보생명</title>
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<script src="/assets/js/kyobo/cheerup/main.js"></script>
+<link rel="stylesheet" type="text/css"
+      href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+<link rel="stylesheet" href="/assets/css/kyobo/cheerup/main.css">
+
+<script type="text/javascript">
+    // Calendar datepicker
+    $(document).on('focus', '.calendar', function () {
+        $(function () {
+            $(".calendar").datepicker({
+                changeMonth: true
+                , changeYear: true
+                , yearRange: '-70:+0'
+            });
+        });
+    });
+</script>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+<script>
+    $(document).ready(function() {
+        var chkVal_1 = false;   var chkVal_2 = false;    var chkVal_3 = false;   var chkVal_4 = false;   var chkVal_5 = false;   var chkVal_6 = false;
+        var chkVal_7 = false;   var chkVal_8 = false;   var chkVal_9 = false;   var chkVal_10 = false;
+
+
+        $("#area_second").change(function() {
+            if(this.value != "") {
+                chkVal_1 = true;
+            } else {
+                chkVal_1 = false;
+            }
+
+            submit_check();
+        });
+
+        $("input:radio[name=present_type]").click(function() {
+            chkVal_2 = true;
+
+            submit_check();
+        });
+
+        $("#applicant_name").on("keyup",function () {
+            if(this.value != "") {
+                chkVal_3 = true;
+            } else {
+                chkVal_3 = false
+            }
+
+            submit_check();
+        });
+
+        $("input:radio[name=applicant_gender]").click(function() {
+            chkVal_4 = true;
+
+            submit_check();
+        });
+
+        $("#birth_year").change(function() {
+            if(this.value != "") {
+                chkVal_5 = true;
+            } else {
+                chkVal_5 = false;
+            }
+
+            submit_check();
+        });
+
+        $("#birth_month").change(function() {
+            if(this.value != "") {
+                chkVal_6 = true;
+            } else {
+                chkVal_6 = false;
+            }
+
+            submit_check();
+        });
+
+        $("#birth_day").change(function() {
+            if(this.value != "") {
+                chkVal_7 = true;
+            } else {
+                chkVal_7 = false;
+            }
+
+            submit_check();
+        });
+
+        $("#applicant_moblie").on("keyup",function () {
+            if(this.value != "") {
+                chkVal_8 = true;
+            } else {
+                chkVal_8 = false
+            }
+
+            submit_check();
+        });
+
+        $("input:radio[name=agree01]").click(function() {
+            if($('input[name="agree01"]:checked').val() == "true") {
+                chkVal_9 = true;
+            } else {
+                chkVal_9 = false;
+            }
+
+            submit_check();
+        });
+
+        $("input:radio[name=agree02]").click(function() {
+            if($('input[name="agree02"]:checked').val() == "true") {
+                chkVal_10 = true;
+            } else {
+                chkVal_10 = false;
+            }
+
+            submit_check();
+        });
+
+
+        function submit_check() {
+            if(chkVal_1 && chkVal_2 && chkVal_3 && chkVal_4 && chkVal_5 && chkVal_6 && chkVal_7 && chkVal_8 && chkVal_9 && chkVal_10) {
+                $("#btn-confirm").addClass("on");
+            } else {
+                $("#btn-confirm").removeClass("on");
+            }
+        }
+
+
+
+        $(".numeric").on("keypress keyup blur",function (event) {
+            $(this).val($(this).val().replace(/[^\d].+/, ""));
+            if ((event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+
+            if ($(this).val().length > 10){
+                return false;
+            }
+        });
+
+        $('#btn-confirm').click(function() {
+            var f = document.frm;
+            var obj;
+
+            obj = $('#area_second');
+            if (obj.val() == "") {
+                alert("상담지역 시/군/구를 선택하세요.");
+                return;
+            }
+
+            // 상담지역 도 시군구 조합
+            var area_first = $("#area_first option:selected").text();
+            var area_second = $("#area_second option:selected").text();
+
+            $("#applicant_area").val(area_first + " " + area_second);
+
+            var present = $("input:radio[name=present_type]:checked").val();
+
+            if (present == "" || present == null) {
+                alert("선물을 선택해주세요.");
+                return;
+            }
+
+            obj = $('#applicant_name');
+            if (obj.val() == "") {
+                alert("성명을 입력하세요.");
+                return;
+            }
+
+            obj = $('#birth_year');
+            if (obj.val() == "") {
+                alert("생년월일 연도를 선택하세요.");
+                return;
+            }
+
+            obj = $('#birth_month');
+            if (obj.val() == "") {
+                alert("생년월일 월을 선택하세요.");
+                return;
+            }
+
+            obj = $('#birth_day');
+            if (obj.val() == "") {
+                alert("생년월일 일을 선택하세요.");
+                return;
+            }
+
+            // 생년원일 조합
+            var birth_year = $("#birth_year option:selected").text();
+            var birth_month = $("#birth_month option:selected").text();
+            var birth_day = $("#birth_day option:selected").text();
+
+            if(birth_month < 10) {
+                birth_month = "0" + String(birth_month);
+            }
+
+            if(birth_day < 10) {
+                birth_day = "0" + String(birth_day);
+            }
+            ($("#applicant_birth").val(String(birth_year) + String(birth_month) + String(birth_day)));
+
+            obj = $('#applicant_moblie-1'), obj = $('#applicant_moblie-2'), obj = $('#applicant_moblie-3');
+            if (obj.val() == "") {
+                alert("휴대전화 번호를 입력하세요.");
+                return;
+            }
+
+            if($('input[name="agree01"]:checked').val() == "false") {
+                alert("개인정보 수집에 동의해야 합니다.");
+                return;
+            }
+
+            if($('input[name="agree02"]:checked').val() == "false") {
+                alert("개인정보 제공에 동의해야 합니다.");
+                return;
+            }
+
+            var yn = confirm("힘내요! 3040! 이벤트 신청을 위한 정보를 등록하시겠습니까?");
+            if (yn) {
+                f.submit();
+            } else {
+                return;
+            }
+        });
+    });
+</script>
+<div id="wrap">
+
+    <!-- container -->
+    <div id="container">
+        <!-- content -->
+        <div id="content">
+            <div class="event_work20191218_wrap Request">
+                <div class="event_work20191218">
+                    <div class="event_work20191218_ct">
+                        <div class="inner">
+                            <form id="frm" name="frm" method="post" action="/src/2020/kyobo/cheerup/cheerup_complete" class="form-horizontal" role="form">
+                                <input type="hidden" id="referer" name="referer" value="">
+
+                                <div class="event-applicant">
+                                    <h1 class="w700">정보 입력</h1>
+                                    <div class="section_data">
+                                        <div class="section_data_tr">
+                                            <span class="img_section_data app_th" style="vertical-align: top">선물수령<br>상담지역</span>
+                                            <div class="sel_wrap app_td">
+                                                <label id="area_first" class="td_txt">경기도</label>
+                                                <select id="area_second" name="area_second" class="working_sel addr02 td_txt td_type_sel">
+                                                    <option value="">시/군/구</option>
+                                                    <option value="수원시 권선구">수원시 권선구</option><option value="수원시 영통구">수원시 영통구</option><option value="수원시 장안구">수원시 장안구</option>
+                                                    <option value="수원시 팔달구">수원시 팔달구</option><option value="수원시 기흥구">수원시 기흥구</option><option value="용인시 수지구">용인시 수지구</option>
+                                                    <option value="용인시 처인구">용인시 처인구</option><option value="오산시">오산시</option><option value="화성시">화성시</option>
+                                                </select>
+                                            </div>
+                                            <small class="desc" style="text-align: right">※ 수원시, 용인시, 화성시, 오산시만 선택 가능합니다.</small>
+                                            <input type="hidden" id="applicant_area" name="applicant_area">
+                                        </div>
+
+                                        <div class="section_data_tr">
+                                            <div class="app_th" style="vertical-align: text-top">선물선택<small class="desc" style="margin-top: 0">(택1 변경불가)</small></div>
+                                            <div class="app_td">
+                                                <div class="block_type01 col">
+                                                    <input type="radio" id="sel-radio-1" class="radio_type1" name="present_type" value="1"><label class="td_txt td_radio" for="sel-radio-1">클럭 미니마사지 SE 세트</label>
+                                                </div>
+                                                <div class="block_type01 col">
+                                                    <input type="radio" id="sel-radio-2" class="radio_type1" name="present_type" value="2"> <label class="td_txt td_radio" for="sel-radio-2">앳플리 건강관리 세트</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="section_data_tr">
+                                            <span class="app_th">성 &emsp;&nbsp;&nbsp; 명</span>
+                                            <div class="app_td">
+                                                <input type="text" id="applicant_name" name="applicant_name" class="work20191218_input01 td_txt" maxlength="10">
+                                            </div>
+                                        </div>
+                                        <div class="section_data_tr">
+                                            <span class="app_th">성 &emsp;&nbsp;&nbsp; 별</span>
+                                            <div class="app_td">
+                                                <div class="row">
+                                                    <input type="radio" id="sel-radio-3" class="radio_type1" name="applicant_gender" value="1" checked="checked"><label class="td_txt td_radio" for="sel-radio-3">여자</label>
+                                                </div>
+                                                <div class="row">
+                                                    <input type="radio" id="sel-radio-4" class="radio_type1" name="applicant_gender" value="2"><label class="td_txt td_radio" for="sel-radio-4"> 남자</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="section_data_tr">
+                                            <span class="app_th" style="padding-bottom: 20px">생년월일</span>
+                                            <div class="sel_wrap app_td">
+                                                <select id="birth_year" name="birth_year" class="working_sel birth01 td_txt">
+                                                    <option value="">년</option>
+                                                    <?php
+                                                     for($i=1965;$i<=1995;$i++){
+                                                 ?>
+                                                    <option value="<?=$i?>"><?=$i?></option>
+                                                    <?php
+                                                     }
+                                                ?>
+                                                </select>
+                                                <select id="birth_month" name="birth_month" class="working_sel birth02 td_txt">
+                                                    <option value="">월</option>
+                                                    <?php
+                                                     for($i=1;$i<=12;$i++){
+                                                 ?>
+                                                    <option value="<?=$i?>"><?=$i?></option>
+                                                    <?php
+                                                     }
+                                                ?>
+                                                </select>
+                                                <select id="birth_day" name="birth_day" class="working_sel birth03 td_txt">
+                                                    <option value="">일</option>
+                                                    <?php
+                                                     for($i=1;$i<=31;$i++){
+                                                 ?>
+                                                    <option value="<?=$i?>"><?=$i?></option>
+                                                    <?php
+                                                     }
+                                                ?>
+                                                </select>
+                                                <input type="hidden" id="applicant_birth" name="applicant_birth">
+                                            </div>
+                                            <small class="desc">※ 1965년생 ~ 1995년생만 참여 가능합니다.</small>
+                                        </div>
+
+                                        <div class="section_data_tr">
+                                            <span class="app_th">휴대전화</span>
+                                            <div class="app_td td_type_phone">
+                                                <input type="tel" id="applicant_moblie-1" class="numeric td_txt" maxlength="3"><span class="bar">-</span>
+                                                <input type="tel" id="applicant_moblie-2" class="numeric td_txt" maxlength="4"><span class="bar">-</span>
+                                                <input type="tel" id="applicant_moblie-3" class="numeric td_txt" maxlength="4">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="agree_wrap">
+                                    <div class="agree_wrap_row type02">
+                                        <p class="app_th">
+                                            광고/정보 수신 및 마케팅<br>
+                                            활용 수집&middot;이용 및 제공 동의서
+                                        </p>
+                                        <p class="txt_agree type02 tex_type">
+                                            당사 및 당사 업무수탁자는 「개인정보보호법」 및 「신용정보의 이용 및 보호에 관한 법률」에 따라 당사의 상품 소개 및 홍보 등을 위하여 귀하의 개인(신용) 정보를 다음과 같이 수집 · 이용하고, 제3자에게 제공하고자 합니다. 귀하는 개인정보 수집 · 이용에 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 해당 이벤트 참여에 제한될 수 있습니다. 동의를 하시더라도 당사 광교중앙FP지원단(031-898-9083)을 통해 언제든지 철회하거나 중단을 요청하실 수 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="agree_wrap">
+                                    <div class="agree_wrap_row">
+                                        <!-- 2019-01-02 수정 -->
+                                        <p class="app_th">
+                                            개인(신용)정보 수집 및 이용에 관한 사항
+                                        </p>
+                                        <p class="txt_agree">
+                                            개인(신용)정보 등을 제공받는 자<br>
+                                            - 당사와 모집위탁계약을 체결한 자(교보생명 FP)<br>
+                                            개인(신용)정보를 제공받는 자의 이용 목적<br>
+                                            - 당사의 상품 · 서비스 소개 및 판매, 홍보 및 이벤트 안내, 당사 기계약조회<br>
+                                            제공할 개인(신용)정보의 내용<br>
+                                            - 개인(신용)정보의 수집 · 이용에 관한 사항의 '수집 · 이용할 개인(신용)정보의 내용' 제공받는 자의 보유 · 이용 기간 : 3개월 <br>
+                                            - 대면 상담 이벤트의 특성상 이벤트 안내 연락 방식은 전화 및 문자로 진행합니다.
+                                        </p>
+                                        <div class="agree_radio app_td">
+                                            <div class="row">
+                                                <input type="radio" id="sel-radio-5" name="agree01" class="radio_type1" name="privacyCollectionAgree" value="true"><label for="sel-radio-5" class="td_txt td_radio">동의함</label>
+                                            </div>
+                                            <div class="row">
+                                                <input type="radio" id="sel-radio-6" name="agree01" class="radio_type1" name="privacyCollectionAgree" value="false" checked="checked"><label for="sel-radio-6" class="td_txt td_radio">동의하지 않음</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="agree_wrap_row">
+                                        <p class="app_th">
+                                            개인(신용)정보 제공에 관한 사항
+                                        </p>
+                                        <p class="txt_agree">
+                                            개인(신용)정보 등의 수집 · 이용 목적<br>
+                                            - 당사의 상품 · 서비스 소개 및 판매, 홍보 및 이벤트 안내<br>
+                                            수집 · 이용할 개인(신용)정보의 내용<br>
+                                            - 성명, 성별, 휴대전화번호, 생년월일, 상담가능지역, 선물선택정보<br>
+                                            개인(신용)정보의 보유 · 이용 기간<br>
+                                            - 본 수집 · 이용 등의일로부터 2년
+                                        </p>
+                                        <!-- //2019-01-02 수정 -->
+                                        <div class="agree_radio app_td">
+                                            <div class="row">
+                                                <input type="radio" id="sel-radio-7" name="agree02" class="radio_type1" name="privacyConsignmentAgree" value="true"><label for="sel-radio-7" class="td_txt td_radio">동의함</label>
+                                            </div>
+                                            <div class="row">
+                                                <input type="radio" id="sel-radio-8" name="agree02" class="radio_type1" name="privacyConsignmentAgree" value="false" checked="checked"><label for="sel-radio-8" class="td_txt td_radio">동의하지 않음</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn_wrap">
+                                    <a id="btn-confirm" class="btn_submit"><span class="blind">신청완료</span></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //content -->
+    </div>
+    <!-- //container -->
+</div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156317515-3"></script>-->
+<!--<script>-->
+<!--    window.dataLayer = window.dataLayer || [];-->
+<!--    function gtag(){dataLayer.push(arguments);}-->
+<!--    gtag('js', new Date());-->
+
+<!--    //  gtag('config', 'UA-156317515-3');-->
+<!--</script>-->

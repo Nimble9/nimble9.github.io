@@ -1,7 +1,7 @@
 ---
 layout: default
 tag: tag2
-title: ecoBubble
+title: EcoBubble
 permalink: /portfolio/2019/ecoBubble/
 tags: tag2
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 tag: tag2
-title: airDresser
+title: AirDresser
 permalink: /portfolio/2019/airDresser/
 tags: tag2
 ---
