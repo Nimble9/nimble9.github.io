@@ -330,13 +330,15 @@ ul.topbar {
 	line-height: 1.4;
 
 	.character {
-		transform: scale(.8);
+		transform: scale(.7);
+		opacity: .9;
 	}
 	.intro {
 		padding: 0 10px 0 0;
 		line-height: 170%;
 	}
 }
+
 
 .post {
 	padding: 10px;
