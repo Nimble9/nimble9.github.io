@@ -1,0 +1,581 @@
+@charset "utf-8";
+
+/* 키즈모드 사용방법 */
+.titArea {text-align:center;}
+.subTit { margin-top:42px; color:#222; font-size:42px; font-family:'SECGCWB'; text-align:center;}
+.subDesc {margin:3px 0 46px; color:#555; font-size:18px; font-family:'SECGCWR'; text-align:center;}
+.conTit { margin-top:60px; color:#222; font-size:34px;font-family:'SECGCWB'; text-align:center;}
+.conDesc { margin-top:10px; color:#888; font-size:18px; font-family:'SECGCWR'; text-align:center;}
+.subConTxt { margin-top:6px; color:#888; font-size:16px; font-family:'SECGCWR'; text-align:center;}
+.sharp {color:#2d45c9;}
+.manual {min-height:463px; background:url('/assets/img/kidsmode/contents/bg_contents.png') no-repeat 50% bottom;}
+.manualCon {width:100%; min-height:1135px; position: relative;}
+.manualCon:before { content:''; display: block; background:#f0f0f0; height:280px; position:absolute; left:0; width:100%; top:0; }
+.titArea,
+.manualTabCon {max-width:940px; margin:0 auto;}
+.slide_1 img {width:250px; height:478px;}
+.manualTabCon .slick-prev,
+.manualTabCon .slick-next {width:50px; height:50px; background:url("/assets/img/kidsmode/contents/btn_arrow.png") no-repeat left top; background-size:50px 100px;}
+.manualTabCon .slick-prev:before,
+.manualTabCon .slick-next:before { display: none;}
+.manualTabCon .slick-prev {left:-80px;}
+.manualTabCon .slick-next { right:-70px; background-position: 0 -50px;}
+.manualTabCon .slick-disabled { display: none !important;}
+.manualTabCon .tabCon {overflow:hidden; height:0; padding:0 80px;}
+.manualTabCon .tabCon .slideCon {margin-top:34px;}
+.manualTabCon .on {height:auto;}
+
+.manualTab {overflow:hidden; position: relative; max-width:940px; width:100%; height:259px; margin:0 auto; padding-top:60px;}
+.manualTab:after { content:''; display:block; position: absolute; left:50%; bottom:0; width:79px; height:39px; margin-left:-40px; background:url("/assets/img/kidsmode/contents/bg_manual_arrow.gif") no-repeat left top; }
+.manualTab li {float:left;width:16.66%;}
+.manualTab li a {position:relative; padding-top:150px; width:100%; color:#888; text-align:center; line-height:1.4; font-size:18px; font-family:"SECGCWM"; }
+.manualTab li a:before { display:block; content:''; position:absolute; left:50%; top:0; margin-left:-70px; width:140px; height:140px; background:url("/assets/img/kidsmode/contents/btn_manual_1.png") no-repeat center top;}
+.manualTab li a.selected {color:#222;}
+.manualTab li a.selected:before {background-position:0 -140px;}
+.manualTab li:nth-child(1) a:before { background-image: url("/assets/img/kidsmode/contents/btn_manual_1.png");}
+.manualTab li:nth-child(2) a:before {background-image: url("/assets/img/kidsmode/contents/btn_manual_2.png");}
+.manualTab li:nth-child(3) a:before {background-image: url("/assets/img/kidsmode/contents/btn_manual_3.png");}
+.manualTab li:nth-child(4) a:before {background-image: url("/assets/img/kidsmode/contents/btn_manual_4.png");}
+.manualTab li:nth-child(5) a:before {background-image: url("/assets/img/kidsmode/contents/btn_manual_5.png");}
+.manualTab li:nth-child(6) a:before {background-image: url("/assets/img/kidsmode/contents/btn_manual_6.png");}
+
+.manual .subDesc span {display: block}
+
+/* 키즈모드 특장점 */
+.advantage dl {max-width:940px; width:100%; margin:0 auto; text-align:center;}
+.advantage dd strong { display:inline-block; margin-top:12px; color:#222; font-size:20px; font-family:"SECGCWR";}
+.advantage .advan_1 dt {color:#ffc000;}
+.advantage .advan_1 {padding:0 0 60px; text-align:center;}
+.advantage .advan_2 {padding:60px 0 60px; text-align:center; background-color:#f0f0f0;}
+.advantage .advan_3 {padding:60px 0 60px; text-align:center;}
+.advantage .advan_1 img,
+.advantage .advan_2 img,
+.advantage .advan_3 img {max-width:100%;}
+.advantage .advan_2 dt {color:#7e5bd8;}
+.advantage .advan_3 dt {color:#39b69f;}
+.advantage .conTit {margin-top:20px;}
+
+/* faq */
+.faq { min-height:463px; padding-bottom:150px; background:url("/assets/img/kidsmode/contents/bg_contents.png") no-repeat 50% bottom;}
+
+/* toggle list type */
+.toggleList {max-width:940px; width:100%; margin:0 auto;}
+.toggleList dl {border-top:4px solid #2d45c9;}
+.toggleList dl dt {position:relative; padding:24px 30px 23px; border-bottom:1px solid #eaeaea; cursor: pointer;}
+.toggleList dl dt strong {overflow: hidden; display: block; width: 100%; padding-right: 100px; color: #222; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; text-overflow: ellipsis; white-space: nowrap; font-size: 16px; font-family: "SECGCWR"; }
+.toggleList dl dt span { position:absolute; right:30px; top:24px; color:#888; font-size:16px; font-family:"SECGCWR";}
+.toggleList dl dt.open * {color:#2d45c9;}
+.toggleList dl dd { position: relative; background-color:#fbfbfb; }
+.toggleList dl dd div {padding:52px 30px 51px; color:#222; border-bottom:1px solid #eaeaea; font-size:16px; line-height:1.9; font-family:"SECGCWR";}
+.toggleList dl dd div .link01 {display: block; position: absolute; top: 40%; right: 38%; width: 24%; height: 2.5%; cursor: pointer; border: 0px solid;}
+.toggleList dl dd div img {max-width:100%; width:100%;}
+.toggleList dl dd div p a {vertical-align:top;}
+
+.tabCon_2 .toggleList dl dt strong {padding-right:180px;}
+
+
+/* paging */
+.paging {max-width:940px; width:100%; margin-top:30px; text-align:center;}
+.paging a {width:32px; height:32px; line-height:33px; color:#888; font-size:14px; text-align:center; vertical-align:top;}
+.paging span { display: inline-block; margin:0 25px;}
+.paging span a {margin:0 3px; border:1px solid #eaeaea; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; vertical-align:-3px;}
+.paging span a:hover,
+.paging span a.selected {border-color:#2d45c9; color:#fff; background-color:#2d45c9;}
+.paging a.prev {width:32px; height:32px; margin-top:1px; font-size:0; background:url("/assets/img/kidsmode/contents/btn_paging.png") no-repeat left top; background-size:32px 64px;}
+.paging a.next {width:32px; height:32px; margin-top:1px; font-size:0; background:url("/assets/img/kidsmode/contents/btn_paging.png") no-repeat left -32px; background-size:32px 64px;}
+
+/* 뉴스 & 이벤트 */
+.newsNevent {min-height:463px; padding-bottom:150px; background:url("/assets/img/kidsmode/contents/bg_contents.png") no-repeat 50% bottom;}
+.toggleTab {overflow:hidden; max-width:360px; width:100%; margin:0 auto 40px;}
+.toggleTab li {width:50%; float:left;}
+.toggleTab li a {position:relative; width:100%; height:55px; line-height:55px; box-sizing:border-box;color:#888; text-align:center; font-size:22px; font-family:'SECGCWR'; background:#f0f0f0; }
+.toggleTab li a:after {content:''; display:block; width:1px; height:55px; position:absolute; right:0; top:0; background-color:#dbdbdb;}
+.toggleTab li:first-child a {-webkit-border-radius:30px 0 0 30px; -moz-border-radius:30px 0 0 30px; border-radius:30px 0 0 30px; }
+.toggleTab li:last-child a {-webkit-border-radius:0 30px 30px 0; -moz-border-radius:0 30px 30px 0; border-radius:0 30px 30px 0; border-right:0 none;}
+.toggleTab li a.selected:after,
+.toggleTab li:last-child a:after { display:none;}
+.toggleTab li a.selected {color:#fff; background:#2d45c9;}
+.newsNevent .tabCon {overflow:hidden; height:0;}
+.newsNevent .on {height:auto;}
+/* 20170711 추가 스타일 : 김석진 */
+.newsNevent .NewsVideo {width: 800px; height: 700px;}
+
+/* 키즈모드 리스트 */
+.kidsMode { min-height:840px; background:url("/assets/img/kidsmode/contents/bg_contents.png") no-repeat 50% bottom;}
+.kidsMode .toggleTab {max-width:720px;}
+.kidsMode .toggleTab li {width:25%;}
+.kidsMode .snsBlog {max-width:940px; width:100%; margin:0 auto; padding-bottom:114px; text-align:center;}
+.kidsMode .snsBlog ul li { text-align: left;}
+.kidsMode .snsInstar  {overflow:hidden; max-width:inherit; width:100%; min-height:463px; padding-bottom:150px; border-top:0 none; background:#f7f7f7 url("/assets/img/kidsmode/contents/bg_contents_gray.jpg") no-repeat center bottom;}
+.kidsMode .snsInstar .instarCon {max-width:940px; width:100%; margin:0 auto;}
+.kidsMode .snsInstar ul:before,
+.kidsMode .snsInstar ul:after {display:none;}
+.kidsMode .moreBtn.type1 {margin:0 0 35px;}
+
+.selectArea {width:100%; margin-bottom:50px; background-color:#51bfaa;}
+.selectCon {max-width:940px; width:100%; margin:0 auto; padding:38px 0 25px; color:#fff; text-align:center;}
+.selectCon > div { margin-bottom:28px; font-size:34px; font-family:'SECGCWB'; text-align:center;}
+.selectCon .referTxt { font-size:14px; font-family:'SECGCWR';}
+
+/* jquery ui select design  */
+.ui-selectmenu-menu { padding: 0; margin: 0; position: absolute; top: 0; left: 0; display: none; }
+.ui-selectmenu-menu .ui-menu { overflow: auto; overflow-x: hidden; padding-bottom: 1px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background-color:#fff; -webkit-box-shadow: 0px 1px 2px 1px lightgrey; -moz-box-shadow: 0px 1px 2px 1px lightgrey; box-shadow: 0px 1px 2px 1px lightgrey;}
+.ui-selectmenu-menu .ui-menu-item {color:#51bfaa; border-bottom:1px solid #eaeaea; text-align:center; font-size:34px; font-family:'SECGCWB';}
+.ui-selectmenu-menu .ui-menu-item:last-child {border-bottom:0 none; margin-bottom:-1px;}
+.ui-selectmenu-menu .ui-state-active {background-color:#fffc00;}
+.ui-selectmenu-open { display: block; }
+.ui-selectmenu-text { display: inline-block; margin-right: 8px; color:#fffc00; font-size:34px; font-family:'SECGCWB';}
+.ui-selectmenu-button.ui-button { display:inline-block; height:45px; line-height:50px; text-align: center; width:125px ; border:3px solid #fff; background:url("/assets/img/kidsmode/contents/bg_select_arrow1.png") no-repeat 95% 50%; background-size:16px 10px;}
+.ui-selectmenu-button.ui-button:focus {outline:0 none; cursor: pointer;}
+
+/* 탭 - 모바일 셀렉트 변환 */
+.toggleSelect {display:none; text-align:center;}
+
+/* 시스템 메세지 레이어 팝업 */
+.msgLayer { display:none; position:fixed; z-index:1005;left:50%; top:50%; width:340px; height:520px; margin:-260px 0 0 -170px; text-align:center; background:url("/assets/img/kidsmode/contents/system_msg.png") no-repeat left top; background-size:cover;}
+.msgLayer p {padding-top:332px; color:#888; text-align:center; font-size:18px; font-family:'SECGCWR';}
+
+/* 키즈모드 상세보기 */
+.viewArea {text-align:center;}
+.viewArea .viewCon {position:relative; max-width:940px; width:100%; margin:0 auto; text-align:left;}
+.viewArea .viewCon dt {padding:34px 30px 33px; border-bottom:1px solid #eaeaea; border-top:4px solid #2d45c9; text-align:center; font-size:30px; font-family:'SECGCWB';}
+.viewArea .viewCon dd {padding: 0 30px; border-bottom:1px solid #eaeaea; }
+.viewArea .viewCon .viewInfo {position:relative; padding:15px 30px 14px;}
+.viewArea .viewCon .viewInfo p,
+.viewArea .viewCon .viewInfo p span,
+.viewArea .viewCon .viewInfo em { font-style:normal; font-size:14px; font-family:'SECGCWR';}
+.viewArea .viewCon .viewInfo em {position:absolute; right:30px; top:16px;}
+.viewArea .viewCon .viewTxt {position:relative; padding:0 30px 60px; line-height:1.8; border-bottom:2px solid #999; font-size:16px; font-family:'SECGCWR';}
+.viewArea .viewCon .viewTxt > div {clear:both; padding-top:25px;}
+.viewArea .viewCon .viewTxt div img {margin-bottom:25px;}
+.viewArea .viewCon .shareBtn {float:right; width:40px; height:40px; margin-top:25px;}
+.viewArea .viewCon .shareBtn img {width:100%; }
+.conTit_sm { margin:60px 0 15px; text-align:left; font-size:18px; font-family:'SECGCWB';}
+
+/* 키즈모드 캐릭터 소개 */
+.layer_closed_btn {display: none}
+
+.characterIntroduce em {font-style: normal}
+.characterIntroduce {min-height:463px; background:url('/assets/img/kidsmode/contents/bg_contents_gray.jpg') no-repeat 50% bottom;}
+.characterIntroduce .titArea {text-align:center;}
+.characterIntroduce .subTit { margin-top:42px; color:#222; font-size:42px; font-family:'SECGCWB'; text-align:center;}
+.characterIntroduce .subDesc {margin:3px 0 54px; color:#555; font-size:18px; font-family:'SECGCWR'; text-align:center;}
+.characterIntroduce .conTit { margin-top:60px; color:#222; font-size:34px;font-family:'SECGCWB'; text-align:center;}
+.characterIntroduce .conDesc { margin-top:10px; color:#888; font-size:18px; font-family:'SECGCWR'; text-align:center;}
+.characterIntroduce .subConTxt { margin-top:6px; color:#888; font-size:16px; font-family:'SECGCWR'; text-align:center;}
+.characterIntroduce .sharp {color:#2d45c9;}
+.characterIntroduce .manual {min-height:463px; background:url('/assets/img/kidsmode/contents/bg_contents.png') no-repeat 50% bottom;}
+.characterIntroduce .charCon {position: relative; width:100%; min-height:1135px; }
+.characterIntroduce .charCon:before { content:''; display: block; background:#f0f0f0; height:280px; position:absolute; left:0; width:100%; top:0; }
+.characterIntroduce .titArea,
+.characterIntroduce .charTabCon {max-width:940px; margin:0 auto;}
+.characterIntroduce .slide_1 img {width:250px; height:478px;}
+.characterIntroduce .charTabCon .slick-prev,
+.characterIntroduce .charTabCon .slick-next {width:50px; height:50px; background:url("/assets/img/kidsmode/contents/btn_arrow.png") no-repeat left top; background-size:50px 100px;}
+.characterIntroduce .charTabCon .slick-prev:before,
+.characterIntroduce .charTabCon .slick-next:before { display: none;}
+.characterIntroduce .charTabCon .slick-prev {left:-80px;}
+.characterIntroduce .charTabCon .slick-next { right:-70px; background-position: 0 -50px;}
+.characterIntroduce .charTabCon .slick-disabled { display: none !important;}
+.characterIntroduce .charTabCon .tabCon {overflow:hidden;height:0;}
+.characterIntroduce .charTabCon .tabCon .slideCon {margin-top:34px;}
+.characterIntroduce .charTabCon .on {height:auto;}
+
+.characterIntroduce .charTabCon {margin-top: 40px;}
+.characterIntroduce .tabConSec .con_tit {padding-right: 140px; display: table-cell; vertical-align: middle; width: 50%;}
+.characterIntroduce .con_tit h3,
+.characterIntroduce .charTabCon .con_tit p {text-align: left;}
+.characterIntroduce .con_tit h3 {font-size: 36px; margin-top: 0}
+.characterIntroduce .con_tit p {font-size: 20px; color: #888}
+.characterIntroduce .charTabCon .tabCon_fig {display: table-cell; vertical-align: middle; width: 50%;}
+.characterIntroduce .charTabCon .tabCon_fig .tabCon_vid {width: 470px; height: 276px; box-sizing: border-box; overflow: hidden}
+.characterIntroduce .charTabCon .tabCon_1 .tabCon_fig .tabCon_vid {border: 8px solid #1fa38b; background-color:#1fa38b;}
+.characterIntroduce .charTabCon .tabCon_2 .tabCon_fig .tabCon_vid {border: 8px solid #d8524b; background-color:#d8524b;}
+.characterIntroduce .charTabCon .tabCon_3 .tabCon_fig .tabCon_vid {border: 8px solid #9172e0; background-color:#9172e0;}
+.characterIntroduce .charTabCon .tabCon_4 .tabCon_fig .tabCon_vid {border: 8px solid #efb400; background-color:#efb400;}
+.characterIntroduce .charTabCon .tabCon_fig .tabCon_vid video {max-width: 100%; margin-top: -60px;}
+
+.characterIntroduce .charTabCon .tabCon .tabConSec {width: 100%; border-bottom: 1px solid #ccc; padding-bottom: 35px;}
+.characterIntroduce .charTabCon .tabCon .tabConSec .tabConDesc {font-size: 20px; color: #888; display: block; padding: 40px 0 30px; text-align: center;}
+.characterIntroduce .charTabCon .tabCon .tabConSec .tabConDesc em {display: block;}
+.characterIntroduce .charTabCon .tabCon .tabConSec:last-of-type {border-bottom: 0;}
+
+.characterIntroduce .charTabCon .tabCon_1 .con_tit h3 {color: #1fa38b}
+.characterIntroduce .charTabCon .tabCon_2 .con_tit h3 {color: #d8524b}
+.characterIntroduce .charTabCon .tabCon_3 .con_tit h3 {color: #9172e0}
+.characterIntroduce .charTabCon .tabCon_4 .con_tit h3 {color: #efb400}
+
+.characterIntroduce .charTab {overflow:hidden; max-width:940px; width:100%; height:299px; margin:0 auto; padding-top:20px; position: relative;}
+.characterIntroduce .charTab:after { content:''; display:block; position: absolute; left:50%; bottom:0; width:79px; height:39px; margin-left:-40px; background:url("/assets/img/kidsmode/contents/bg_manual_arrow.gif") no-repeat left top; }
+.characterIntroduce .charTab li {float:left; width:25%;}
+.characterIntroduce .charTab li a {position:relative; padding-top:205px; width:100%; color:#888; font-size:18px; font-family:"SECGCWM"; text-align:center; line-height:1.4;}
+.characterIntroduce .charTab li a:before { display:block; content:''; position:absolute; left:50%; top:0; width:185px; height:200px; margin-left:-92.5px; background:url("/assets/img/kidsmode/contents/btn_manual_1.png") no-repeat center top;}
+.characterIntroduce .charTab li a.selected {color:#222;}
+.characterIntroduce .charTab li a.selected:before {background-position:0 -200px;}
+.characterIntroduce .charTab li:nth-child(1) a {color: #1fa38b;}
+.characterIntroduce .charTab li:nth-child(2) a {color: #d8524b;}
+.characterIntroduce .charTab li:nth-child(3) a {color: #9172e0;}
+.characterIntroduce .charTab li:nth-child(4) a {color: #efb400;}
+
+.characterIntroduce .charTab li:nth-child(1) a:before {background-image: url("/assets/img/kidsmode/contents/btn_char_1.png");}
+.characterIntroduce .charTab li:nth-child(2) a:before {background-image: url("/assets/img/kidsmode/contents/btn_char_2.png");}
+.characterIntroduce .charTab li:nth-child(3) a:before {background-image: url("/assets/img/kidsmode/contents/btn_char_3.png");}
+.characterIntroduce .charTab li:nth-child(4) a:before {background-image: url("/assets/img/kidsmode/contents/btn_char_4.png");}
+
+.characterIntroduce .aptFlowCon {background-image: url("/assets/img/kidsmode/common/back_color_gray.gif"); background-repeat-y: no-repeat; background-size: 581px; }
+.characterIntroduce .aptFlowCon .con_tit {width: 100%; text-align: center; display: block; }
+.characterIntroduce .aptFlowCon .con_tit h3 {text-align: center; padding-top: 60px;}
+.characterIntroduce .aptFlowCon .con_tit p em {display: block}
+.characterIntroduce .aptFlow { max-width:940px; margin:0 auto; width:100%;}
+
+.characterIntroduce .slick-initialized .slick-slide {padding:100px 0; position:relative;}
+.characterIntroduce .slick-initialized .slick-slide {transform: scale(.5); -webkit-transition: all 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: all 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: all 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .slick-initialized .slick-center {transform: scale(1, 1); -webkit-transition: all 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: all 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: all 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .slick-initialized .slick-slide img { position: relative; z-index:10; opacity:.5; -webkit-transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .slick-initialized .slick-center img { opacity:1; -webkit-transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .slick-initialized .slick-slide span { opacity:0; position:relative; z-index: 11; -webkit-transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .slick-initialized .slick-center span { opacity:1; -webkit-transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: opacity 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .slick-initialized .slick-slide .bg {opacity:0;}
+.characterIntroduce .slick-initialized .slick-center .bg {opacity:1;}
+.characterIntroduce .slick-initialized .slick-slide {text-align:center;}
+.characterIntroduce .slick-initialized .slick-slide img {display:inline-block;}
+
+.characterIntroduce .coverflow .innerFlow .bg {position: absolute; width:395px; height:410px; left:50%; top:50%; margin-top: -220px; margin-left: -210px;}
+.characterIntroduce .coverflow .a1.slick-center .bg {background:url("/assets/img/kidsmode/contents/cover_back_1.png") no-repeat 0 center;background-size:contain; -webkit-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .coverflow .a2.slick-center .bg {background:url("/assets/img/kidsmode/contents/cover_back_2.png") no-repeat 0 center;background-size:contain; -webkit-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .coverflow .a3.slick-center .bg {background:url("/assets/img/kidsmode/contents/cover_back_3.png") no-repeat 0 center;background-size:contain; -webkit-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .coverflow .a4.slick-center .bg {background:url("/assets/img/kidsmode/contents/cover_back_4.png") no-repeat 0 center;background-size:contain; -webkit-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .coverflow .a5.slick-center .bg {background:url("/assets/img/kidsmode/contents/cover_back_5.png") no-repeat 0 center;background-size:contain; -webkit-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .coverflow .a6.slick-center .bg {background:url("/assets/img/kidsmode/contents/cover_back_6.png") no-repeat 0 center;background-size:contain; -webkit-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .coverflow .a7.slick-center .bg {background:url("/assets/img/kidsmode/contents/cover_back_7.png") no-repeat 0 center;background-size:contain; -webkit-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: background-image 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .coverflow .a1 .bg,
+.characterIntroduce .coverflow .a2 .bg,
+.characterIntroduce .coverflow .a3 .bg,
+.characterIntroduce .coverflow .a4 .bg,
+.characterIntroduce .coverflow .a5 .bg,
+.characterIntroduce .coverflow .a6 .bg,
+.characterIntroduce .coverflow .a7 .bg {background:none; -webkit-transition: background 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); -moz-transition: background 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750); transition: background 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750);}
+.characterIntroduce .coverflow .innerFlow span {display: block; font-size: 36px; font-family: "SECGCWB"}
+.characterIntroduce .coverflow .a1 span {color: #e99133}
+.characterIntroduce .coverflow .a2 span {color: #ffc000}
+.characterIntroduce .coverflow .a3 span {color: #fe8a79}
+.characterIntroduce .coverflow .a4 span {color: #37aa92}
+.characterIntroduce .coverflow .a5 span {color: #f17a45}
+.characterIntroduce .coverflow .a6 span {color: #a560c7}
+.characterIntroduce .coverflow .a7 span {color: #757ae7}
+
+.characterIntroduce .coverflow .slick-arrow {width: 50px; height: 50px; z-index: 9}
+.characterIntroduce .coverflow .slick-prev {background-image: url("/assets/img/kidsmode/common/arrows_left.png"); left: 23%;}
+.characterIntroduce .coverflow .slick-next {background-image: url("/assets/img/kidsmode/common/arrows_right.png"); right: 23%;}
+
+@media(max-width:1024px){
+    /* content common tablet style*/
+    /* title */
+    .subTit { margin-top:4.5%; font-size:54px;}
+    .subDesc { margin-bottom:4.9%; padding:0 6%; font-size:26px;}
+    .subDesc span { display: block;}
+    .conTit { margin-top:9%; font-size:42px; }
+    /* button */
+    .moreBtn.type1 {min-width:260px; height:80px; border-radius:40px; line-height:80px; font-size:30px;}
+    .moreBtn.type1:after { font-size:30px;}
+    .whiteBtn {min-width:260px; height:80px; margin-top:6%; border-radius:40px; line-height:80px; font-size:30px;}
+    /* paging */
+    .paging {margin-top:6.3%;}
+    .paging a {width:62px;height:62px;line-height:63px; font-size:30px; }
+    .paging span {display:inline; margin:0 4%; }
+    .paging span a {margin:0 1%; border-radius:40px;}
+    .paging a.prev { width:64px; height:64px; background-size:64px 128px;}
+    .paging a.next { width:64px; height:64px; background-position:0 -64px; background-size:64px 128px;}
+
+    /*키즈모드 리스트 페이지(블로그, 인스타)*/
+    .selectCon {padding:3.8% 0 2.5%;}
+    .selectCon > div { font-size:44px;}
+    .selectCon > div > span {display:block;}
+    .selectArea {margin-bottom:5.7%;}
+    .ui-selectmenu-button.ui-button {width:160px; height:60px; line-height:60px;}
+    .kidsMode .toggleTab {display:none;}
+    .toggleSelect {display:block; }
+    .ui-selectmenu-text { font-size:40px;}
+    .ui-selectmenu-menu .ui-menu-item { font-size:40px;}
+    .ui-selectmenu-button.ui-button {background-size:32px 19px;}
+    .ui-selectmenu-menu #selectMenu1-menu {margin-top:10px;}
+    .ui-selectmenu-menu #selectMenu1-menu .ui-state-active {color:#fff; font-size:34px; font-family:'SECGCWR'; background-color:#2d45c9;}
+    .ui-selectmenu-menu #selectMenu1-menu .ui-menu-item {color:#222; border-bottom:1px solid #eaeaea; font-size:34px; font-family:'SECGCWR';}
+    .ui-selectmenu-menu #selectMenu1-menu .ui-menu-item:last-child {border-bottom:0 none;}
+    .ui-selectmenu-menu #selectMenu1-menu .ui-menu-item .ui-menu-item-wrapper {padding:21px 0 21px;}
+    .kidsMode .snsBlog {padding-bottom:12.5%;}
+    .kidsMode .snsBlog ul {max-width:640px; width:100%; margin:0 auto 5%; padding:0 6%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+    .kidsMode .snsBlog ul li:first-child {margin-top:6%;}
+    .kidsMode .snsBlog ul li:nth-child(3) {display:block;}
+    .kidsMode .snsBlog ul li {margin-top:72px;}
+    .kidsMode .snsBlog ul li img { display: block; height:auto; max-width:100%; }
+    .kidsMode .moreBtn.type1 {margin-bottom:2.7%; }
+    .toggleSelect .ui-selectmenu-button.ui-button {width:330px; height:89px; line-height:90px; -webkit-border-radius:50px; -moz-border-radius:50px; border-radius:50px; background:#2d45c9 url("/assets/img/kidsmode/contents/bg_select_arrow1.png") no-repeat 85% 50%; }
+    .toggleSelect .ui-selectmenu-text {color:#fff;  font-size:34px; font-family:'SECGCWR';}
+    .kidsMode .snsInstar {padding-bottom:12.5%;}
+    .kidsMode .snsInstar .instarCon {width:100%; padding:0 6%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+    .kidsMode .snsInstar ul {padding-top:4.9%; }
+
+    /* 키즈모드 리스트 시스템 알럿 레이어 팝업 */
+    .msgLayer .blueBtn {min-width:165px; height:50px; line-height:50px; font-size:20px; padding:0;}
+
+    /* 키즈모드 상세페이지 */
+    .viewArea .viewCon {padding:0 6%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+    .viewArea .viewCon dt {padding:4.1% 3.7% 4.0%; font-size:32px;}
+    .viewArea .viewCon .viewInfo {padding:2.9% 3.6% 2.4%;}
+    .viewArea .viewCon .viewInfo p,
+    .viewArea .viewCon .viewInfo p span,
+    .viewArea .viewCon .viewInfo em { right:3.7%; top:31.5%; font-size:24px;}
+    .viewArea .viewCon .viewTxt {padding:0 4.9% 7.3%;  font-size:24px;}
+    .viewArea .viewCon .shareBtn {width:10.8%; height:auto; margin-top:3.4%;}
+    .viewArea .viewCon .viewTxt > div {padding-top:3.4%;}
+    .viewArea .viewCon .viewTxt div img { max-width:100%; width:100%; }
+    .conTit_sm {margin:6.4% 0 -1.5%; text-align:center;}
+
+    /* toggle list type */
+    .toggleList {padding:0 5.9%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+    .toggleList dl dt { padding:2.5% 3.2% 2.4%;}
+    .toggleList dl dt strong { padding-right:130px; font-size:24px;}
+    .toggleList dl dt span { right:3.2%; top:25%; font-size:24px;}
+    .toggleList dl dd div { padding:5.5% 3.2% 5.4%; font-size:24px;}
+	.tabCon_2 .toggleList dl dt strong { padding-right:270px;}
+
+
+    /* 뉴스 이벤트 */
+    .newsNevent .toggleTab {max-width:580px; margin-bottom:5.9%; }
+    .newsNevent .toggleTab li:first-child a { -webkit-border-radius:50px 0 0 50px; -moz-border-radius:50px 0 0 50px; border-radius:50px 0 0 50px;}
+    .newsNevent .toggleTab li:last-child a { -webkit-border-radius:0 50px 50px 0; -moz-border-radius:0 50px 50px 0; border-radius:0 50px 50px 0;}
+    .newsNevent .toggleTab li a { height:90px; line-height:90px; font-size:36px;}
+	/* 20170711 추가 스타일 : 김석진 */
+	.newsNevent .NewsVideo {width: 600px; height: 500px;}
+
+    /* 키즈모드 특장점 */
+    .subConTxt { margin-top:1.9%; font-size:24px;}
+    .subConTxt br { display: none;}
+
+    .advantage .advan_1 {padding:0 5.9% 5.9%; text-align:center;}
+    .advantage .advan_2 {padding:5.9% 5.9% 5.9%; text-align:center; background-color:#f0f0f0;}
+    .advantage .advan_3 {padding:5.9% 5.9% 5.9%; text-align:center;}
+    .advantage dd strong { margin-top:1.5%; font-size:28px;}
+    .advantage dd strong span { display:block;}
+    .advantage .conTit {margin-top:3.4%;}
+
+    /* 키즈모드 캐릭터 소개 */
+    .scrollDisable {overflow-y: hidden}
+
+    .charTabCon, .manualTabCon {display: none}
+
+    .onLayer {border-top: 6px solid #2d45c9; position: fixed; background: white; z-index: 1002; top: 0; left: 0; right: 0; bottom: 0; margin-top: 0; overflow-y: scroll;}
+    .onLayer {display: block}
+
+    .layer_closed_btn {display: block; width: 80px; height: 80px; overflow: hidden; margin: 35px auto 45px;}
+    .layer_closed_btn a {text-indent: -99999px; width: 80px; height: 80px;}
+    .layer_closed_btn a:before {content:""; display: block; background: url(/assets/img/kidsmode/common/layer_closed_btn.gif) no-repeat; width: 80px; height: 80px; text-indent: -99999px;}
+
+    .characterIntroduce, .manual {background: none}
+    .characterIntroduce .subTit, .manual .subTit {font-size: 56px;}
+    .characterIntroduce .subDesc, .manual .subDesc {font-size: 28px; padding: 10px 0 0}
+    .characterIntroduce .subDesc span {display: block}
+    .characterIntroduce .tabConSec .con_tit, .manual .con_tit {display: block; padding-right: inherit; width: auto; /*padding: 0 8%;*/}
+    .characterIntroduce .con_tit h3, .manual .con_tit h3 {text-align: center; font-size: 50px; margin-top: 0}
+    .characterIntroduce .charTabCon .con_tit p, .manual .manualTabCon .con_tit p {text-align: center; font-size: 26px;}
+    .characterIntroduce .charTab, .manual .manualTab {height: auto; width: auto; padding: 45px 0 7%; /*80px*/}
+    .characterIntroduce .charTab:after, .manual .manualTab:after {display: none}
+    .characterIntroduce .titArea, .manual .titArea {max-width: 100%; width: auto; padding: 0 14%;}
+
+    .characterIntroduce .charCon {width: auto; padding: 0 14%; /*152px*/ min-height: 1920px;}
+    .characterIntroduce .charCon:before {height: 800px;}
+
+    .characterIntroduce .charTab li {width: 50%;}
+    .characterIntroduce .charTab li:nth-child(1) a:before {background-image: url("/assets/img/kidsmode/contents/btn_char_m_1.png");}
+    .characterIntroduce .charTab li:nth-child(2) a:before {background-image: url("/assets/img/kidsmode/contents/btn_char_m_2.png");}
+    .characterIntroduce .charTab li:nth-child(3) a:before {background-image: url("/assets/img/kidsmode/contents/btn_char_m_3.png");}
+    .characterIntroduce .charTab li:nth-child(4) a:before {background-image: url("/assets/img/kidsmode/contents/btn_char_m_4.png");}
+    .characterIntroduce .charTab li a:before,
+    .characterIntroduce .charTab li a.selected:before {background-position: center;}
+    .characterIntroduce .charTab li a:before {width: 244px; height: 258px; margin-left: -122px;}
+    .characterIntroduce .charTab li a {padding-top: 280px; font-size: 36px;}
+    .characterIntroduce .charTab li:nth-child(3),
+    .characterIntroduce .charTab li:nth-child(4) {margin-top: 60px;}
+
+    .characterIntroduce .coverflow .slick-prev,
+    .characterIntroduce .coverflow .slick-next {width:26px; height:26px; background-size:26px;}
+    .characterIntroduce .coverflow .slick-prev {left: 0; }
+    .characterIntroduce .coverflow .slick-next {right: 0;}
+    .characterIntroduce .aptFlowCon {background: none}
+    .characterIntroduce .slick-initialized .slick-center {transform: scale(1, 1);}
+
+    .characterIntroduce .charTabCon {max-width: 100%; padding: 0 6%; margin-top: 0;}
+    .characterIntroduce .charTabCon .tabCon_fig {display: block; width: 100%;}
+    .characterIntroduce .charTabCon .tabCon_fig .tabCon_vid {margin: 35px auto 15px}
+    .characterIntroduce .charTabCon .tabCon .tabConSec {padding-bottom: 55px;}
+    .characterIntroduce .charTabCon .tabCon .tabConSec .tabConDesc {font-size: 26px; padding:40px 8% 30px;}
+    .characterIntroduce .charTabCon .tabCon .tabConSec .tabConImg {padding: 0 14%}
+    .characterIntroduce .charTabCon .tabCon .tabConSec figure img {width: 100%; max-width: 100%;}
+    .characterIntroduce .charTabCon .tabCon .tabConSec .tabConDesc em {display: inline}
+
+    /* 키즈모드 사용방법 */
+    .manual .manualCon {min-height: 1000px;}
+    .manual .manualCon:before {height: 1000px;}
+    .manual .manualTab li {width: 33.33333%;}
+    .manual .manualTab li:nth-child(1) a:before {background-image: url("/assets/img/kidsmode/contents/btn_manu_m_1.png");}
+    .manual .manualTab li:nth-child(2) a:before {background-image: url("/assets/img/kidsmode/contents/btn_manu_m_2.png");}
+    .manual .manualTab li:nth-child(3) a:before {background-image: url("/assets/img/kidsmode/contents/btn_manu_m_3.png");}
+    .manual .manualTab li:nth-child(4) a:before {background-image: url("/assets/img/kidsmode/contents/btn_manu_m_4.png");}
+    .manual .manualTab li:nth-child(5) a:before {background-image: url("/assets/img/kidsmode/contents/btn_manu_m_5.png");}
+    .manual .manualTab li:nth-child(6) a:before {background-image: url("/assets/img/kidsmode/contents/btn_manu_m_6.png");}
+    .manual .manualTab li a {color: #222}
+    .manual .manualTab li a:before,
+    .manual .manualTab li a.selected:before {background-position: center;}
+    .manual .manualTab li a:before {width: 243px; height: 243px; margin-left: -121.5px;}
+    .manual .manualTab li a {padding-top: 260px; font-size: 36px;}
+    .manual .manualTab li:nth-child(4),
+    .manual .manualTab li:nth-child(5),
+    .manual .manualTab li:nth-child(6) {margin-top: 60px;}
+
+    .manual .manualTabCon {max-width: 100%; padding: 0 6% 50px;}
+    .manual .manualTabCon .tabCon {margin-bottom:8px; padding: 0;}
+    .manual .manualTabCon .tabCon .slideCon {padding: 0 92px 80px;}
+    .manual .manualTabCon .tabCon .slideCon .slick-dots {left: 0; bottom: 0;}
+    .manual .manualTabCon .tabCon .slideCon .slick-slide {text-align: center}
+
+    .manual .manualTabCon .slick-prev,
+    .manual .manualTabCon .slick-next {width:26px; height:26px; background-size:26px 52px;}
+    .manual .manualTabCon .slick-prev {left: 0}
+    .manual .manualTabCon .slick-next {right: 0; background-position:0 -26px;}
+
+    .slide_1 img {width: 351px; height: 664px; display: inline;}
+
+}
+@media(max-width:720px){
+    /* content common mobile style*/
+    /* title */
+    .subTit { margin-top:25px;font-size:27px;}
+    .subDesc { margin-bottom:25px; font-size:13px;}
+    .conTit { font-size:21px;}
+    /* button */
+    .moreBtn.type1 {min-width:130px; height:40px; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; line-height:40px; font-size:15px;}
+    .moreBtn.type1:after { line-height:1.6; font-size:15px;}
+    .whiteBtn {min-width:130px; height:40px; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; line-height:40px; font-size:15px;}
+    /* paging */
+    .paging a {width:30px;height:30px;line-height:32px; font-size:15px; }
+    .paging span {display:inline; }
+    .paging span a {-webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px;}
+    .paging a.prev { width:32px; height:32px; background-size:32px 64px;}
+    .paging a.next { width:32px; height:32px; background-position:0 -32px; background-size:32px 64px;}
+    /*키즈모드 리스트 페이지(블로그, 인스타)*/
+    .kidsMode { min-height:inherit; background:none;}
+    .selectCon {padding:23px 0 22px;}
+    .selectCon > div { margin-bottom:20px; font-size:22px;}
+    .ui-selectmenu-button.ui-button {}
+    .toggleSelect .ui-selectmenu-button.ui-button {width:165px; height:40px; line-height:40px; -webkit-border-radius:25px; -moz-border-radius:25px; border-radius:25px; }
+    .toggleSelect .ui-selectmenu-text { font-size:17px; }
+    .toggleSelect .ui-selectmenu-button.ui-button {background-size:16px 10px;}
+    .ui-selectmenu-menu #selectMenu1-menu .ui-menu-item { font-size:17px;}
+    .ui-selectmenu-menu #selectMenu1-menu .ui-state-active { font-size:17px;}
+    .ui-selectmenu-menu #selectMenu1-menu {margin-top:5px; }
+    .ui-selectmenu-menu #selectMenu1-menu .ui-menu-item .ui-menu-item-wrapper {padding:10px 0 10px; }
+    .kidsMode .snsBlog ul li {margin-top:20px;}
+    .selectCon .ui-selectmenu-button.ui-button {width:80px; height:30px; line-height:30px; border:1px solid #fff; background-size:16px 10px;}
+    .selectCon .ui-selectmenu-text { font-size:20px;}
+    .ui-selectmenu-menu #selectMenu-menu .ui-menu-item { font-size:20px;}
+
+    /* 키즈모드 리스트 시스템 알럿 레이어팝업  */
+    .msgLayer { margin:-186px 0 0 -122px; width:245px; height:373px; background:url("/assets/img/kidsmode/contents/system_msg.png") no-repeat left top; background-size:cover;}
+    .msgLayer p {padding-top:240px; font-size:14px; }
+    .msgLayer .blueBtn {min-width:120px; height:35px; margin-top:17px; line-height:35px; font-size:14px; }
+
+    /*키즈모드 상세페이지*/
+    .viewArea .viewCon .viewInfo p,
+    .viewArea .viewCon .viewInfo p span,
+    .viewArea .viewCon .viewInfo em {text-align:center;}
+    .viewArea .viewCon .viewInfo em { position:static; display:inline-block; width:100%; margin-top:5px; text-align:center;}
+    .viewArea .viewCon dt { font-size:16px;}
+    .viewArea .viewCon .viewInfo p,
+    .viewArea .viewCon .viewInfo p span,
+    .viewArea .viewCon .viewInfo em { font-size:12px;}
+    .viewArea .viewCon .viewTxt {padding:0 4.9% 7.3%;  font-size:12px;}
+    .conTit_sm {font-size:16px;}
+
+    /*faq*/
+    .faq { min-height:inherit; }
+
+    /* toggle list type */
+    .toggleList dl dt span {top:28%; }
+    .toggleList dl dt strong { padding-right:70px; font-size:12px;}
+    .toggleList dl dt span { font-size:12px;}
+    .toggleList dl dd div { font-size:12px;}
+    .toggleList dl dd div .link01 { top:17.5%; right:23%; width:54%; height:1.5%;}
+	.tabCon_2 .toggleList dl dt strong { padding-right:140px;}
+
+    /* 뉴스 이벤트 */
+    .newsNevent { min-height:inherit; background:none;}
+    .newsNevent .toggleTab {max-width:290px; }
+    .newsNevent .toggleTab li:first-child a { -webkit-border-radius:30px 0 0 30px; -moz-border-radius:30px 0 0 30px; border-radius:30px 0 0 30px; }
+    .newsNevent .toggleTab li:last-child a { -webkit-border-radius:0 30px 30px 0; -moz-border-radius:0 30px 30px 0; border-radius:0 30px 30px 0; }
+    .newsNevent .toggleTab li a { height:45px; line-height:45px; font-size:18px;}
+    /* 20170711 추가 스타일 : 김석진 */
+    .newsNevent .NewsVideo {width: 300px; height: 200px;}
+
+    /* 키즈모드 특장점 */
+    .subConTxt { font-size:12px;}
+    .advantage dd strong { font-size:14px;}
+
+    /* 캐릭터 소개 */
+    .layer_closed_btn {margin: 17px auto 22px;}
+    .layer_closed_btn,
+    .layer_closed_btn a {width: 40px; height: 40px;}
+    .layer_closed_btn a:before {width: 40px; height: 40px; background-size: contain;}
+
+    .characterIntroduce .subTit, .manual .subTit {font-size: 28px; margin-top: 21px;}
+    .characterIntroduce .subDesc, .manual .subDesc {font-size: 14px; padding: 5px 0 0; margin: 3px 0 27px;}
+    .characterIntroduce .titArea, .manual .titArea {padding: 0 6%;}
+    .characterIntroduce .con_tit h3, .manual .con_tit h3 {font-size: 25px;}
+    .characterIntroduce .charTabCon .con_tit p, .manual .manualTabCon .con_tit p {font-size: 13px;}
+    .characterIntroduce .charTab, .manual .manualTab {padding: 27px 0 3.5%;}
+
+    .characterIntroduce .charCon {padding: 0 6%; min-height: 900px;}
+    .characterIntroduce .charCon:before {height: 400px;}
+    /*.characterIntroduce .charCon:before {height: 42.5%;}*/
+    .characterIntroduce .con_tit {padding: 0}
+    .characterIntroduce .con_tit p {font-size: 12px;}
+
+    .characterIntroduce .charTabCon .tabCon .tabConSec {padding-bottom: 27px;}
+    .characterIntroduce .charTabCon .tabCon .tabConSec .tabConDesc {padding: 20px 0 15px; font-size: 13px;}
+    .characterIntroduce .charTabCon .tabCon .tabConSec .tabConImg {padding: inherit; width: 100%; margin: auto;}
+    .characterIntroduce .charTabCon .tabCon_fig .tabCon_vid {margin: 20px auto 10px;}
+    .characterIntroduce .charTabCon .tabCon_fig .tabCon_vid {width:235px; height: 138px;}
+    .characterIntroduce .charTabCon .tabCon_fig .tabCon_vid video {margin-top: -30px;}
+
+    .characterIntroduce .charTab li a {padding-top: 140px; font-size: 16px;}
+    .characterIntroduce .charTab li a:before {width: 122px; height: 129px; background-size: contain; margin-left: -61px;}
+    .characterIntroduce .charTab li:nth-child(3),
+    .characterIntroduce .charTab li:nth-child(4) {margin-top: 30px;}
+
+    .characterIntroduce .aptFlowCon .con_tit h3 {font-size: 25px; padding-top: 30px;}
+
+    .characterIntroduce .coverflow {margin-bottom: 0}
+    .characterIntroduce .coverflow .innerFlow span {font-size: 18px;}
+    .characterIntroduce .coverflow .innerFlow .bg {width: 198px; height: 205px; margin-top: -110px; margin-left: -105px;}
+
+    .characterIntroduce .slick-initialized .slick-slide {padding: 60px 0;}
+    .characterIntroduce .slick-initialized .slick-slide img {width: 119px; height: 299px;}
+
+    /* 키즈모드 사용방법 */
+    .manual .manualCon {min-height: 700px;}
+    .manual .manualTab li {width: 50%;}
+    .manual .manualTab li:nth-child(3),
+    .manual .manualTab li:nth-child(4),
+    .manual .manualTab li:nth-child(5),
+    .manual .manualTab li:nth-child(6) {margin-top: 60px;}
+    .manual .manualCon {width: auto; padding: 0 6%;}
+
+    .manual .manualTab li a {font-size: 18px; padding-top: 130px;}
+    .manual .manualTab li a:before {width: 122px; height: 122px; background-size: contain; margin-left: -61px;}
+    .manual .manualTab li:nth-child(3),
+    .manual .manualTab li:nth-child(4),
+    .manual .manualTab li:nth-child(5),
+    .manual .manualTab li:nth-child(6) {margin-top: 30px;}
+    .manual .manualTabCon .tabCon .slideCon {padding: 0 20% 40px;}
+    .slide_1 img {width: 175px; height: 332px;}
+}
