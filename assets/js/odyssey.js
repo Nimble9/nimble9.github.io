@@ -839,10 +839,5 @@ crossBrowsingEvent(function() {
                 $(".odp5-feature-wrap .odp5-pdp-section .odp5-feature-figure .odp5-feature-vid video").css("display", "none");
             }
         });
-
-        addEventListener('load', () => {
-            // debugger;
-            document.querySelector(".wrapper").classList.remove("before-load");
-        });
     }(jQuery));
 });

@@ -1,0 +1,60 @@
+<style>
+    @keyframes loading-spin {
+        100% { transform: rotate(360deg); }
+    }
+
+    @keyframes loading-circle-ani {
+        0% { stroke-dashoffset: 157; }
+        80% { stroke-dashoffset: -147; }
+        100% {stroke-dashoffset: -157;}
+    }
+
+    .loading {
+        position: fixed;
+        background: white;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        opacity: 0;
+    }
+    .before-load {
+        overflow: hidden;
+    }
+    .before-load .loading {
+        opacity: 1;
+    }
+    .before-load + div {
+        display: none;
+    }
+    .loading-circle {
+        animation: loading-spin 3s infinite;
+    }
+
+    .loading-circle circle {
+        stroke: black;
+        stroke-width: 4;
+        fill: none;
+        /*getTotalLength()로 stroke 길이를 얻을 수 있음*/
+        stroke-dasharray: 157;
+        stroke-dashoffset: 0;
+        animation: loading-circle-ani 1.25s infinite;
+    }
+</style>
+<div class="wrapper before-load">
+    <div class="loading">
+        <svg class="loading-circle">
+            <circle cx="50%" cy="50%" r="25"></circle>
+        </svg>
+    </div>
+</div>
+<script>
+    addEventListener('load', () => {
+        document.querySelector(".wrapper").classList.remove("before-load");
+    });
+</script>
