@@ -1,0 +1,949 @@
+---
+---
+
+.clearfix::before, .clearfix::after { content: ""; display: table; }
+
+.clearfix::after { clear: both; }
+
+.flip-wrapper { max-width: 1440px; position: relative; margin: 0 auto; overflow-x: hidden; }
+
+.flip-wrapper .alt, .flip-wrapper figcaption { display: block; text-indent: -99999px; width: 0; height: 0; overflow: hidden; position: absolute; }
+
+.flip-wrapper .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
+
+.flip-wrapper .slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
+
+.flip-wrapper .slick-list.dragging { cursor: pointer; cursor: hand; }
+
+.flip-wrapper .slick-slider .slick-track, .flip-wrapper .slick-slider .slick-list { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+.flip-wrapper .slick-track { position: relative; left: 0; top: 0; display: block; }
+
+.flip-wrapper .slick-track:before, .flip-wrapper .slick-track:after { content: ""; display: table; }
+
+.flip-wrapper .slick-track:after { clear: both; }
+
+.slick-loading .flip-wrapper .slick-track { visibility: hidden; }
+
+.flip-wrapper .slick-slide { float: left; }
+
+[dir="rtl"] .flip-wrapper .slick-slide { float: right; }
+
+.flip-wrapper .slick-slide img { display: block; }
+
+.flip-wrapper .slick-slide.slick-loading img { display: none; }
+
+.flip-wrapper .slick-slide.dragging img { pointer-events: none; }
+
+.slick-initialized .flip-wrapper .slick-slide { display: block; }
+
+.slick-loading .flip-wrapper .slick-slide { visibility: hidden; }
+
+.slick-vertical .flip-wrapper .slick-slide { display: block; height: auto; border: 1px solid transparent; }
+
+.flip-wrapper .slick-arrow.slick-hidden { display: none; }
+
+.flip-wrapper .slick-dots { width: 100%; text-align: center; position: absolute; bottom: 5%; }
+
+.flip-wrapper .slick-dots li { display: inline-block; margin: 0 5px; }
+
+.flip-wrapper .slick-dots li button { width: 16px; height: 16px; border: 1px solid #000; border-radius: 50%; text-indent: -99999px; overflow: hidden; background: #fff; }
+
+.flip-wrapper .slick-dots li.slick-active button { background: #000; }
+
+.flip-wrapper .slick-arrow { position: absolute; top: 50%; text-indent: -99999px; width: 70px; height: 160px; z-index: 2; background: url(/assets/img/flip/f_slide_arrows_icon.png); margin-top: -80px; }
+
+.flip-wrapper .slick-prev { left: 80px; background-position: -70px 0; }
+
+.flip-wrapper .slick-next { right: 80px; }
+
+.flip-wrapper .slick-prev:hover, .flip-wrapper .slick-prev:focus { background-position: -70px -160px; }
+
+.flip-wrapper .slick-next:hover, .flip-wrapper .slick-next:focus { background-position: 0 -160px; }
+
+.flip-wrapper button::-moz-focus-inner { padding: 2px; }
+
+.flip-wrapper button:-moz-focusring { outline: 1px dotted blue; }
+
+.flip-menu { z-index: 1001; background: #171719; }
+
+.flip-menu .menu { background: #171719; line-height: 67px; overflow: hidden; }
+
+.flip-menu .menu ul li { box-sizing: border-box; }
+
+.flip-menu .menu ul li .n_icon { display: inline-block; width: 35px; height: 35px; vertical-align: middle; margin-right: 10px; }
+
+.flip-menu .menu ul li .n_creativity-icon { background: url(/assets/img/flip/menu-icon1-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-menu .menu ul li .n_collaboration-icon { background: url(/assets/img/flip/menu-icon2-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-menu .menu ul li .n_innovation-icon { background: url(/assets/img/flip/menu-icon3-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-menu .menu ul li a { display: block; color: #a6a6a6; font-size: 20px; font-family: "SamsungOne"; font-weight: 700; }
+
+.flip-menu .menu ul li a:hover { color: #fff; border-bottom: 2px solid #fff; }
+
+.flip-menu .menu ul li a:hover .n_creativity-icon { background: url(/assets/img/flip/menu-icon1-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-menu .menu ul li a:hover .n_collaboration-icon { background: url(/assets/img/flip/menu-icon2-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-menu .menu ul li a:hover .n_innovation-icon { background: url(/assets/img/flip/menu-icon3-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-menu .menu ul li.on .n_creativity-icon { background: url(/assets/img/flip/menu-icon1-on.png) no-repeat scroll center !important; background-size: contain !important; }
+
+.flip-menu .menu ul li.on .n_collaboration-icon { background: url(/assets/img/flip/menu-icon2-on.png) no-repeat scroll center !important; background-size: contain !important; }
+
+.flip-menu .menu ul li.on .n_innovation-icon { background: url(/assets/img/flip/menu-icon3-on.png) no-repeat scroll center !important; background-size: contain !important; }
+
+.flip-menu .menu ul li.on a { color: #fff !important; border-bottom: 2px solid #fff; }
+
+.flip-menu .menu ul li.hover .n_creativity-icon { background: url(/assets/img/flip/menu-icon1-on.png) no-repeat scroll center !important; background-size: contain !important; }
+
+.flip-menu .menu ul li.hover .n_collaboration-icon { background: url(/assets/img/flip/menu-icon2-on.png) no-repeat scroll center !important; background-size: contain !important; }
+
+.flip-menu .menu ul li.hover .n_innovation-icon { background: url(/assets/img/flip/menu-icon3-on.png) no-repeat scroll center !important; background-size: contain !important; }
+
+.flip-menu .menu ul li.hover a { color: #fff !important; border-bottom: 2px solid #fff; }
+
+.flip-menu .static-menu { width: 549px; position: absolute; z-index: 2; }
+
+.flip-menu .static-menu ul li { float: left; width: 183px; text-align: center; border-right: 1px solid #3c3c3c; }
+
+.flip-menu .static-menu ul li .n_creativity-icon { background: url(/assets/img/flip/menu-icon1-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-menu .static-menu ul li .n_collaboration-icon { background: url(/assets/img/flip/menu-icon2-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-menu .static-menu ul li .n_innovation-icon { background: url(/assets/img/flip/menu-icon3-off.png) no-repeat scroll center; background-size: contain; border-right: 0; }
+
+.flip-menu .static-menu ul li.on .n_creativity-icon { background: url(/assets/img/flip/menu-icon1-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-menu .static-menu ul li.on .n_collaboration-icon { background: url(/assets/img/flip/menu-icon2-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-menu .static-menu ul li.on .n_innovation-icon { background: url(/assets/img/flip/menu-icon3-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-menu .static-menu ul li.on a { color: #fff; }
+
+.flip-menu .static-menu.off { opacity: 0; visibility: hidden; }
+
+.flip-menu .sticky-menu { width: 70px; z-index: 99; position: fixed; top: 50%; margin-top: -100px; transition: all ease .35s; transform: scale(1); box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.3); }
+
+.flip-menu .sticky-menu ul li { width: auto; float: none; border-bottom: 1px solid #3c3c3c; }
+
+.flip-menu .sticky-menu ul li a { display: block; text-align: center; height: 70px; box-sizing: border-box; overflow: hidden; font-size: 0;}
+
+.flip-menu .sticky-menu ul li a span { display: block; text-indent: -99999px; margin-right: 0; }
+
+.flip-menu .sticky-menu ul li .n_icon { margin-right: 0; }
+
+.flip-menu .sticky-menu ul .n_innovation { border-bottom: 0; }
+
+.flip-menu .sticky-menu.off { opacity: 0; visibility: hidden; transform: scale(0); }
+
+.flip-menu .sticky-menu.end { top: auto; position: absolute !important; bottom: 0; }
+
+.s_key-visual .f_header { position: relative; overflow: hidden; }
+
+.s_key-visual .f_header .h_inside { width: 1440px; height: 587px; background-size: cover; background-position: center; position: relative; }
+
+.s_key-visual .f_header .h_inside .h_tit { text-align: center; padding-top: 230px; color: #fff; font-size: 84px; font-family: "SamsungSharpSans"; position: relative; z-index: 1; opacity: 0; }
+
+.s_key-visual .f_header .h_inside .h_tit:after { content: ""; display: block; position: absolute; border-bottom: 4px solid #fff; width: 35px; left: 50%; margin-left: -17px; }
+
+.s_key-visual .f_header .h_inside .h_mask { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; }
+
+.s_key-visual .f_header .h_inside .h_mask .mask { display: block; position: absolute; transition: all ease 1s; }
+
+.s_key-visual .f_header .h_inside .h_mask .mask-top { top: -68px; height: 68px; background: #fff; width: 100%; transform: translateY(67px); }
+
+.s_key-visual .f_header .h_inside .h_mask .mask-right { top: 0; right: -266px; background: #fff; width: 266px; height: 100%; transform: translateX(-265px); }
+
+.s_key-visual .f_header .h_inside .h_mask .mask-bottom { bottom: -68px; background: #fff; width: 100%; height: 68px; transform: translateY(-67px); }
+
+.s_key-visual .f_header .h_inside .h_mask .mask-left { left: -266px; background: #fff; width: 266px; height: 100%; transform: translateX(265px); }
+
+.s_key-visual .f_header .h_kv-bg1 { background: url(/assets/img/flip/flip_creativity_kv_bg.jpg) no-repeat; background-size: cover; }
+
+.s_key-visual .f_header .h_kv-bg2 { background: url(/assets/img/flip/flip_collaboration_kv_bg.jpg) no-repeat; background-size: cover; }
+
+.s_key-visual .f_header .h_kv-bg3 { background: url(/assets/img/flip/flip_innovation_kv_bg.jpg) no-repeat; background-size: cover; }
+
+.s_key-visual .f_header.active .h_inside .h_tit { transition: all .5s ease 1.5s; opacity: 1; }
+
+.s_key-visual .f_header.active .h_inside .h_mask { transition: all 1s ease 1s; background: #000; opacity: 0.5; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); }
+
+.s_key-visual .f_header.active .h_inside .h_mask .mask { transform: translate(0); }
+
+.s_feature { margin-top: 85px; position: relative; }
+
+.s_feature .h_inside .h_tit { font-size: 24px; font-family: "SamsungOne"; font-weight: 700; color: #000; }
+
+.s_feature .h_inside .h_sub-tit { font-size: 46px; font-family: "SamsungSharpSans"; color: #000; margin-top: 20px; }
+
+.s_feature .h_inside .h_description { font-size: 18px; font-family: "SamsungOne"; font-weight: 400; margin-top: 20px; line-height: 1.75; color: #363636; }
+
+.s_feature .h_inside .h_disclaimer { font-family: "SamsungOne"; font-size: 12px; line-height: 1.75; font-weight: 400; margin-top: 25px; color: #363636; }
+
+.s_feature .f_header-type1 { width: 687px; margin: auto; text-align: center; }
+
+.s_feature .f_header-type2 { text-align: left; }
+
+.s_feature .f_header { z-index: 1; }
+
+.s_feature .f_container { margin-top: 70px; }
+
+.s_feature .f_container .c_image { width: 100%; max-width: 100%; position: relative; overflow: hidden; }
+
+.s_feature .f_container .c_video .alt-image { display: none; }
+
+.s_feature .f_container .c_video .v_con { position: absolute; z-index: 1; bottom: 0; }
+
+.s_feature .f_container .pre_img { display: block; }
+
+.flip-capture .f_container { position: relative; }
+
+@keyframes pop { 0% { -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0); }
+  70% { -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
+  100% { -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+
+.flip-navigation { width: 100%; height: 892px; overflow: hidden; position: relative; }
+
+.flip-navigation .f_header { width: 50%; float: right; position: relative; }
+
+.flip-navigation .f_header .h_inside { width: 475px; margin-left: 120px; margin-top: 230px; display: none; position: absolute; }
+
+.flip-navigation .f_header .h_inside.hide { transition: all ease .4s; display: none; }
+
+.flip-navigation .f_header .h_slide1 { display: block; }
+
+.flip-navigation .f_container { margin-top: 0; float: left; width: 510px; height: 892px; margin-left: 210px; background: url(/assets/img/flip/flip_notation-bg.png) no-repeat scroll bottom; background-size: contain; }
+
+.flip-navigation .f_container .c_slide { width: 488px; z-index: 1; margin-left: 21px; margin-top: 2px; }
+
+.flip-navigation .slick-dots { width: 50%; text-align: left; box-sizing: border-box; padding-left: 120px; right: 0; bottom: 220px; }
+
+.flip-protection .f_header .h_inside { display: none; }
+
+.flip-protection .f_header .h_inside.hide { transition: all ease .4s; display: none; }
+
+.flip-protection .f_header .h_slide1 { display: block; }
+
+.flip-protection .f_container { overflow: hidden; position: relative; }
+
+.flip-protection .f_container .c_btn-wrapper { position: relative; width: 100%; text-align: center; margin-bottom: 36px; z-index: 2; }
+
+.flip-protection .f_container .c_btn-wrapper .btn { display: inline-block; padding: 0 15px; font-family: "SamsungOne"; font-weight: 700; font-size: 22px; color: #767676; }
+
+.flip-protection .f_container .c_btn-wrapper .btn .btn-icon { width: 136px; height: 136px; display: block; margin-bottom: 10px; }
+
+.flip-protection .f_container .c_btn-wrapper .btn.btn-left .btn-icon { background: url(/assets/img/flip/flip_protection_btn1-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-protection .f_container .c_btn-wrapper .btn.btn-right .btn-icon { background: url(/assets/img/flip/flip_protection_btn2-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-protection .f_container .c_btn-wrapper .btn.on { color: #000; }
+
+.flip-protection .f_container .c_btn-wrapper .btn.on.btn-left .btn-icon { background: url(/assets/img/flip/flip_protection_btn1-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-protection .f_container .c_btn-wrapper .btn.on.btn-right .btn-icon { background: url(/assets/img/flip/flip_protection_btn2-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-protection .f_container .c_btn-wrapper .btn strong { display: none; text-indent: -99999px; width: 1px; height: 1px; overflow: hidden; position: absolute; }
+
+.flip-protection .f_container .c_btn-wrapper .btn strong.on { display: inline-block; }
+
+.flip-protection .f_container .c_btn-wrapper .btn span { display: block; text-align: center; }
+
+.flip-protection .slick-dots { position: relative; bottom: auto; margin: 20px 0 40px; }
+
+.flip-usage .f_header { width: 50%; position: relative; }
+
+.flip-usage .f_header .h_inside { width: 590px; margin-left: 142px; margin-top: 140px; position: absolute; }
+
+.flip-usage .f_header .h_inside .h_sub-tit, .flip-usage .f_header .h_inside .h_description { padding: 0 115px 0 0; }
+
+.flip-usage .f_header .h_inside .h_icon_wrapper { margin: 160px 0 0; }
+
+.flip-usage .f_header .h_inside .h_icon_wrapper .h_icon-tit { font-size: 32px; font-family: "SamsungOne"; font-weight: 800; }
+
+.flip-usage .f_header .h_inside .h_icon_wrapper ul { overflow: hidden; }
+
+.flip-usage .f_header .h_inside .h_icon_wrapper ul li { float: left; }
+
+.flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon-img { width: 127px; height: 72px; display: block; margin: 40px 0 20px; background: url(/assets/img/flip/flip_usage_icons.jpg) no-repeat; }
+
+.flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon1 { background-position: 37px 0; background-size: cover; }
+
+.flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon2 { background-position: -105px 0; background-size: cover; }
+
+.flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon3 { background-position: -244px 0; background-size: cover; }
+
+.flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon-txt { display: block; font-size: 18px; text-align: center; font-family: "SamsungOne"; }
+
+.flip-usage .f_header .h_inside .h_disclaimer { margin: 50px 0 0; }
+
+.flip-usage .f_header .h_slide1 { display: block; }
+
+.flip-usage .f_container .h_disclaimer { position: absolute; z-index: 1; bottom: 50px; left: 142px; font-size: 12px; line-height: 1.75; font-weight: 400; color: #363636; }
+
+.flip-connection { overflow: hidden; }
+
+.flip-connection .f_header { width: 732px; float: right; position: relative; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper { margin-top: 65px; font-size: 0; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn { display: inline-block; margin-right: 82px; font-family: "SamsungOne"; font-weight: 700; font-size: 18px; color: #767676; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn .btn-icon { width: 92px; height: 92px; display: block; overflow: hidden; margin-bottom: 10px; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn.btn-hdmi .btn-icon { background: url(/assets/img/flip/flip_connection_hdmi-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn.btn-win10 .btn-icon { background: url(/assets/img/flip/flip_connection_win10-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn.btn-mirroring .btn-icon { background: url(/assets/img/flip/flip_connection_miracast-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn.btn-nfc { margin-right: 0; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn.btn-nfc .btn-icon { background: url(/assets/img/flip/flip_connection_nfc-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn.on { color: #000; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn.on.btn-hdmi .btn-icon { background: url(/assets/img/flip/flip_connection_hdmi-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn.on.btn-win10 .btn-icon { background: url(/assets/img/flip/flip_connection_win10-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn.on.btn-mirroring .btn-icon { background: url(/assets/img/flip/flip_connection_miracast-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn.on.btn-nfc .btn-icon { background: url(/assets/img/flip/flip_connection_nfc-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn strong { display: none; text-indent: -99999px; overflow: hidden; width: 0; height: 0; position: absolute; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn strong.on { display: block; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .btn span { display: block; text-align: center; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .slide_description { font-size: 18px; font-family: "SamsungOne"; font-weight: 400; margin-top: 20px; line-height: 1.75; }
+
+.flip-connection .f_header .h_inside .h_btn-wrapper .slide_disclaimer { font-family: "SamsungOne"; font-size: 12px; line-height: 1.75; font-weight: 400; margin-top: 25px; }
+
+.flip-connection .f_header-type2 .h_inside { margin-top: 35px; width: 614px; }
+
+.flip-connection .f_container { float: left; margin-top: 0; height: 700px; overflow: hidden; }
+
+.flip-connection .f_container .c_slide { width: 496px; margin-left: 118px; }
+
+.flip-synchronization .f_container { position: relative; }
+
+.flip-synchronization .f_container .c_btn-wrapper { position: absolute; width: 100%; margin-top: 75px; z-index: 1000; }
+
+.flip-synchronization .f_container .c_btn-wrapper .btn { display: block; width: 73px; height: 48px; margin-left: 227px; }
+
+.flip-synchronization .f_container .c_btn-wrapper .btn:before { content: ""; width: 73px; height: 48px; display: inline-block; z-index: 10; position: relative; background: #fff; opacity: 0; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); }
+
+.flip-synchronization .f_container .c_btn-wrapper .btn strong { display: none; text-indent: -99999px; width: 0; height: 0; overflow: hidden; }
+
+.flip-synchronization .f_container .c_btn-wrapper .btn strong.on { display: inline-block; }
+
+.flip-synchronization .f_container .c_btn-wrapper .btn span { display: block; text-align: center; text-indent: -99999px; overflow: hidden; width: 0; height: 0; }
+
+.flip-synchronization .f_container .c_btn-wrapper .btn-right { margin-top: 93px; }
+
+.flip-synchronization .f_container .c_btn-wrapper .touch-wave { width: 63px; height: 76px; position: absolute; left: 260px; top: 10px; visibility: hidden; opacity: 0; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); }
+
+.flip-synchronization .f_container .c_btn-wrapper .touch-wave .pointer { display: block; width: 63px; height: 78px; position: absolute; background: url(/assets/img/flip/flip_synchronization-point1.png) no-repeat scroll center; background-size: contain; transition: all ease .25s; z-index: 5; }
+
+.flip-synchronization .f_container .c_btn-wrapper .touch-wave .wavelength { display: block; width: 63px; height: 76px; position: absolute; animation: wave 1.5s linear infinite alternate-reverse; transition: all .5s ease 1s; }
+
+.flip-synchronization .f_container .c_btn-wrapper .touch-wave .wave1 { background: url(/assets/img/flip/flip_synchronization-point2.png) no-repeat scroll center; background-size: contain; z-index: 4; animation-delay: 0s; }
+
+.flip-synchronization .f_container .c_btn-wrapper .touch-wave .wave2 { background: url(/assets/img/flip/flip_synchronization-point3.png) no-repeat scroll center; background-size: contain; z-index: 3; animation-delay: 0.5s; }
+
+.flip-synchronization .f_container .c_btn-wrapper .touch-wave .wave3 { background: url(/assets/img/flip/flip_synchronization-point4.png) no-repeat scroll center; background-size: contain; z-index: 2; animation-delay: 1s; }
+
+.flip-synchronization .f_container .c_btn-wrapper .touch-wave .wave4 { background: url(/assets/img/flip/flip_synchronization-point5.png) no-repeat scroll center; background-size: contain; z-index: 1; animation-delay: 1.5s; }
+
+.flip-synchronization .f_container .c_btn-wrapper .touch-wave.right { top: 150px; }
+
+.flip-synchronization .f_container .c_btn-wrapper .touch-wave.left { top: 10px; }
+
+@keyframes wave { from { opacity: 0; }
+  to { opacity: 1; } }
+
+.flip-synchronization .f_container .c_btn-wrapper .touch-wave.on { visibility: visible; opacity: 1; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); }
+
+.flip-synchronization .f_container .c_image.display { position: absolute; bottom: 0; visibility: hidden; opacity: 0; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); transition: all ease 1s; }
+
+.flip-synchronization .f_container .c_image.display.on { transition: all 1s ease 1s; visibility: visible; opacity: 1; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); }
+
+.flip-presentation { margin-top: 0 !important; }
+
+.flip-presentation .f_header { position: relative; }
+
+.flip-presentation .f_header .h_inside { position: absolute; margin-top: 85px; }
+
+.flip-presentation .f_container { margin-top: 0 !important; }
+
+.flip-presentation .f_container .c_btn-wrapper { position: absolute; width: 100%; text-align: center; margin-top: 440px; z-index: 2; }
+
+.flip-presentation .f_container .c_btn-wrapper .btn { display: inline-block; padding: 0 15px; font-family: "SamsungOne"; font-weight: 700; font-size: 22px; color: #000; }
+
+.flip-presentation .f_container .c_btn-wrapper .btn .btn-icon { content: ""; width: 136px; height: 136px; display: inline-block; margin-bottom: 10px; }
+
+.flip-presentation .f_container .c_btn-wrapper .btn.btn-left .btn-icon { background: url(/assets/img/flip/flip_presentation_btn1-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-presentation .f_container .c_btn-wrapper .btn.btn-right .btn-icon { background: url(/assets/img/flip/flip_presentation_btn2-off.png) no-repeat scroll center; background-size: contain; }
+
+.flip-presentation .f_container .c_btn-wrapper .btn.on.btn-left .btn-icon { background: url(/assets/img/flip/flip_presentation_btn1-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-presentation .f_container .c_btn-wrapper .btn.on.btn-right .btn-icon { background: url(/assets/img/flip/flip_presentation_btn2-on.png) no-repeat scroll center; background-size: contain; }
+
+.flip-presentation .f_container .c_btn-wrapper .btn strong { display: none; text-indent: -99999px; width: 0; height: 0; overflow: hidden; }
+
+.flip-presentation .f_container .c_btn-wrapper .btn strong.on { display: inline-block; }
+
+.flip-presentation .f_container .c_btn-wrapper .btn span { display: block; text-align: center; }
+
+.flip-presentation .f_container .c_image { display: none; }
+
+.flip-presentation .f_container .c_image.on { display: block; }
+
+.flip-distribution { overflow: hidden; margin-top: 0 !important; }
+
+.flip-distribution .f_header { width: 472px; margin-top: 250px; margin-left: 140px; float: left; }
+
+.flip-distribution .f_container { width: 760px; float: right; position: relative; }
+
+.flip-distribution .f_container .c_image:first-child { position: absolute; bottom: 0; z-index: 2; transition: all .5s ease .5s; }
+
+.flip-distribution .f_container .c_image:first-child.hide { visibility: hidden; opacity: 0; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); }
+
+.flip-viewing .f_container { position: relative; }
+
+.flip-viewing .f_container .h_icon_wrapper { width: 720px; position: absolute; right: 0; bottom: 80px; z-index: 1; padding: 0 0 0 30px; box-sizing: border-box; }
+
+.flip-viewing .f_container .h_icon_wrapper .h_icon-tit { font-size: 32px; font-family: 'SamsungOne'; font-weight: 800; }
+
+.flip-viewing .f_container .h_icon_wrapper .icon-txt { font-size: 18px; font-family: 'SamsungOne'; }
+
+.flip-viewing .f_container .h_icon_wrapper ul { overflow: hidden; float: left; margin: 0 35px 0 0; }
+
+.flip-viewing .f_container .h_icon_wrapper ul li { float: left; }
+
+.flip-viewing .f_container .h_icon_wrapper ul li .icon-img { width: 55px; height: 66px; display: block; margin: 0 0 0 6px; background: url(/assets/img/flip/flip_viewing_icons.png) no-repeat; }
+
+.flip-viewing .f_container .h_icon_wrapper ul li .icon1 { background-position: 0 0; background-size: cover; }
+
+.flip-viewing .f_container .h_icon_wrapper ul li .icon2 { background-position: -62px 0; background-size: cover; }
+
+.flip-viewing .f_container .h_icon_wrapper ul li .icon3 { background-position: -124px 0; background-size: cover; }
+
+.flip-touch .f_container .i_feature { font-family: "SamsungOne"; font-size: 22px; font-weight: 700; width: 136px; display: block; text-align: center; margin: 0 auto 50px; }
+
+.flip-touch .f_container .i_feature .f_icon { width: 136px; height: 136px; display: block; background: url(/assets/img/flip/flip_touch_icon.png) no-repeat scroll center; background-size: contain; margin: 0 auto 10px; text-indent: -99999px; overflow: hidden; }
+
+.flip-touch .f_container .c_image { text-align: center; }
+
+.flip-touch .f_container .c_video .v_con { left: 50%; margin-left: -578px; }
+
+.flip-touch .f_container .c_video .alt-image { position: absolute; z-index: 1; left: 142px; }
+
+.flip-design { background: #F0F0F0; margin-top: 0 !important; }
+
+.flip-design .f_header { padding-top: 85px; }
+
+.flip-design .f_container { background-size: contain; }
+
+.flip-design .f_container .c_image { transition: all ease 2s; transform: translateX(-50%); }
+
+.flip-design .f_container .c_image.active { transform: translateX(0); }
+
+.flip-design2 { background: #F0F0F0; padding-top: 85px; }
+
+.flip-design2 .f_container { position: relative; overflow: hidden; }
+
+.flip-design2 .f_container .c_inside { height: 900px; }
+
+.flip-design2 .f_container .c_inside.fixed { position: fixed; top: 0; z-index: 10; width: 1440px; left: 50%; margin-left: -720px; }
+
+.flip-design2 .f_container .c_inside .c_video { position: absolute; visibility: hidden; opacity: 0; z-index: 0; }
+
+.flip-design2 .f_container .c_inside .c_video.on { visibility: visible; opacity: 1; z-index: 1; }
+
+.flip-design2 .f_container .c_video .v_con { display: block; }
+
+.flip-design2 .f_container .c_canvas { position: relative; width: 1440px; left: 50%; margin-left: -720px; }
+
+.flip-design2 .f_container .c_canvas canvas { display: block; }
+
+.flip-display { margin-top: 0 !important; background: #000; }
+
+.flip-display .f_header { position: relative; }
+
+.flip-display .f_header .h_inside { position: absolute; margin-top: 85px; z-index: 1; }
+
+.flip-display .f_header .h_inside * { color: #fff; }
+
+.flip-display .f_container { margin-top: 0 !important; position: relative; }
+
+.flip-display .f_container .c_image.display { position: absolute; bottom: 0; visibility: visible; opacity: 0; transition: all ease 2s; }
+
+.flip-display .f_container .c_image.display.show { visibility: visible; opacity: 1; }
+
+.flip-solution { background: #000; overflow: hidden; margin-top: 0 !important; padding-top: 85px; }
+
+.flip-solution .f_header { width: 568px; margin-left: 140px; float: left; }
+
+.flip-solution .f_header .h_inside * { color: #fff; }
+
+.flip-solution .f_header .h_inside .icon { color: #fff; display: inline-block; margin-top: 30px; }
+
+.flip-solution .f_header .h_inside .icon i { display: block; margin: 0 auto 10px; text-indent: -99999px; overflow: hidden; width: 80px; height: 80px; background: url(/assets/img/flip/flip_solution_icon.png) no-repeat scroll center; background-size: contain; }
+
+.flip-solution .f_container { width: 590px; float: right; margin-top: 0; }
+
+.flip-solution2 .f_container .c_inner_feature { display: none; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image { text-align: right; background: #efefef; overflow: hidden; position: relative; height: 720px; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature { margin-left: 140px; width: 436px; position: absolute; margin-top: 230px; text-align: left; z-index: 2; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature .f_icon { display: block; width: 160px; height: 160px; text-indent: -99999px; overflow: hidden; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature .f_tit { font-family: "SamsungOne"; font-size: 40px; font-weight: 700; margin-top: 15px; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature .f_txt { font-family: "SamsungOne"; font-size: 18px; font-weight: 400; line-height: 1.5; margin-top: 10px; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .hall i { background: url(/assets/img/flip/flip_solution2_icon1.png) no-repeat scroll center; background-size: contain; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .proximity i { background: url(/assets/img/flip/flip_solution2_icon2.png) no-repeat scroll center; background-size: contain; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .accelerometer i { background: url(/assets/img/flip/flip_solution2_icon3.png) no-repeat scroll center; background-size: contain; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .c_solution2_img2-2 { visibility: hidden; opacity: 0; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .c_solution2_img2-3 { transform: translateX(20%); }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .c_solution2_img3 { display: inline; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image img { width: 100%; position: absolute; bottom: 0; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .sq_figure { width: 100%; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image .sq_figure img { width: 100%; position: absolute; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image.c_solution2-1 .sq_figure img { opacity: 0; z-index: 0; visibility: hidden; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image.c_solution2-1 .sq_figure img.on { opacity: 1; z-index: 1; visibility: visible; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image.c_solution2-3 .sq_figure img { right: 0; opacity: 0; z-index: 0; visibility: hidden; width: 50%; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_image.c_solution2-3 .sq_figure img.on { opacity: 1; z-index: 1; visibility: visible; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_solution2-2 .wave { width: 257px; height: 91px; position: absolute; bottom: 45px; left: 643px; z-index: 2; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_solution2-2 .wave .step { width: 263px; height: 96px; display: inline-block; position: absolute; left: 0; visibility: visible; opacity: 0; transition: all ease .5s; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_solution2-2 .wave .step1 { background: url(/assets/img/flip/flip_solution2-wave1.png) no-repeat scroll center; background-size: contain; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_solution2-2 .wave .step2 { background: url(/assets/img/flip/flip_solution2-wave2.png) no-repeat scroll center; background-size: contain; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_solution2-2 .wave .step3 { background: url(/assets/img/flip/flip_solution2-wave3.png) no-repeat scroll center; background-size: contain; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .c_solution2-2 .wave .step4 { background: url(/assets/img/flip/flip_solution2-wave4.png) no-repeat scroll center; background-size: contain; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .i_trigger.on .c_solution2_img2-2 { visibility: visible; opacity: 1; transition: all 1s ease 2s; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .i_trigger.on .c_solution2_img2-3 { transform: translateX(0); transition: all 1s ease 1.25s; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .i_trigger.on .wave .step { visibility: visible; opacity: 1; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .i_trigger.on .wave .step1 { transition-delay: .25s; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .i_trigger.on .wave .step2 { transition-delay: .75s; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .i_trigger.on .wave .step3 { transition-delay: 1.25s; }
+
+.flip-solution2 .f_container .c_slide .slide_inside .i_trigger.on .wave .step4 { transition-delay: 1.75s; }
+
+.flip-solution2 .slick-dots { position: relative; bottom: inherit; margin: 35px 0; }
+
+.flip-operation .f_container { padding: 0 0 100px; }
+
+.flip-operation .f_container .c_icon_wrapper { width: 1156px; margin: auto; overflow: hidden; padding: 50px 0 0; }
+
+.flip-operation .f_container .c_icon_wrapper .c_icon { width: 50%; height: 80px; float: left; display: table; }
+
+.flip-operation .f_container .c_icon_wrapper .icon-img { width: 129.75px; height: 90px; background: url(/assets/img/flip/flip_operation_icons.jpg) no-repeat; display: table-cell; vertical-align: middle; }
+
+.flip-operation .f_container .c_icon_wrapper .icon-txt { padding: 0 0 0 20px; display: table-cell; vertical-align: middle; }
+
+.flip-operation .f_container .c_icon_wrapper .icon_tit { font-weight: 800; font-size: 18px; font-family: "SamsungOne"; }
+
+.flip-operation .f_container .c_icon_wrapper .icon_text { font-weight: 400; font-size: 18px; color: #363636; font-family: "SamsungOne"; }
+
+.flip-operation .f_container .c_icon_wrapper .icon3, .flip-operation .f_container .c_icon_wrapper .icon4 { margin: 110px 0 0; }
+
+.flip-operation .f_container .c_icon_wrapper .icon1 .icon-img { background-position: 12px 0; background-size: cover; }
+
+.flip-operation .f_container .c_icon_wrapper .icon2 .icon-img { background-position: -150px 0; background-size: cover; }
+
+.flip-operation .f_container .c_icon_wrapper .icon3 .icon-img { background-position: -298px 0; background-size: cover; }
+
+.flip-operation .f_container .c_icon_wrapper .icon4 .icon-img { background-position: -419px 0; background-size: cover; }
+
+@media (max-width: 1440px) { .flip-wrapper .slick-arrow { width: 4.861111111111111vw; height: 11.11111111111111vw; margin-top: -5.555555555555556vw; background-size: 9.722222222222222vw 22.22222222222222vw; }
+  .flip-wrapper .slick-prev { left: 5.555555555555556vw; background-position: -4.861111111111111vw 0; }
+  .flip-wrapper .slick-next { right: 5.555555555555556vw; }
+  .flip-wrapper .slick-prev:hover, .flip-wrapper .slick-prev:focus { background-position: -4.861111111111111vw -11.11111111111111vw; }
+  .flip-wrapper .slick-next:hover, .flip-wrapper .slick-next:focus { background-position: 0 -11.11111111111111vw; }
+  .flip-menu .menu { line-height: 4.65277777777778vw; }
+  .flip-menu .menu ul li a { font-size: 1.38888888888889vw; }
+  .flip-menu .menu ul li .n_icon { width: 2.43055555555556vw; height: 2.43055555555556vw; }
+  .flip-menu .static-menu { width: 38.125vw; }
+  .flip-menu .static-menu ul li { width: 12.70833333333333vw; }
+  .flip-menu .static-menu ul li a { font-size: 1.38888888888889vw; }
+  .flip-menu .sticky-menu { width: 4.86111111111111vw; margin-top: -6.944444444444444vw; }
+  .flip-menu .sticky-menu ul li a { height: 4.86111111111111vw; }
+  .s_key-visual .f_header .h_inside { width: auto; height: 40.76388888888889vw; }
+  .s_key-visual .f_header .h_inside .h_tit { padding-top: 15.97222222222222vw; font-size: 5.83333333333333vw; }
+  .s_feature { margin-top: 5.90277777777778vw; }
+  .s_feature .f_header-type1 { width: 47.70833333333333vw; }
+  .s_feature .h_inside .h_tit { font-size: 1.66666666666667vw; }
+  .s_feature .h_inside .h_sub-tit { font-size: 3.19444444444444vw; margin-top: 1.38888888888889vw; }
+  .s_feature .h_inside .h_description { font-size: 1.25vw; margin-top: 1.38888888888889vw; }
+  .s_feature .f_container { margin-top: 4.861111111111111vw; }
+  .s_feature .f_container .c_image .screen-responsive { width: 100%; }
+  .s_feature .f_container .c_video img, .s_feature .f_container .c_video video { width: 100%; }
+  .flip-navigation { height: 61.94444444444444vw; }
+  .flip-navigation .f_header-type2 .h_inside { width: 32.98611111111111vw; margin-left: 8.33333333333333vw; margin-top: 15.97222222222222vw; }
+  .flip-navigation .f_container { width: 35.41666666666667vw; height: 61.94444444444444vw; margin-left: 14.58333333333333vw; }
+  .flip-navigation .f_container .c_slide { width: 33.88888888888889vw; margin-left: 1.45833333333333vw; margin-top: 0.13888888888889vw; }
+  .flip-navigation .slick-dots { bottom: 15.27777777777778vw; padding-left: 8.33333333333333vw; }
+  .flip-protection .f_container .c_btn-wrapper { margin-bottom: 2.5vw; }
+  .flip-protection .f_container .c_btn-wrapper .btn { font-size: 1.527777777777778vw; }
+  .flip-protection .f_container .c_btn-wrapper .btn .btn-icon { width: 9.444444444444444vw; height: 9.444444444444444vw; margin-bottom: 0.6944444444444444vw; }
+  .flip-usage .f_header .h_inside { width: 40.97222222222222vw; margin-top: 9.722222222222222vw; margin-left: 8.19444444444444vw; }
+  .flip-usage .f_header .h_inside .h_sub-tit, .flip-usage .f_header .h_inside .h_description { padding: 0 7.986111111111111vw 0 0; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper { margin: 11.11111111111111vw 0 0; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper .h_icon-tit { font-size: 2.222222222222222vw; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon-img { width: 8.819444444444444vw; height: 5vw; margin: 2.777777777777778vw 0 1.388888888888889vw; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon-txt { font-size: 1.25vw; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon1 { background-position: 2.569444444444444vw 0; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon2 { background-position: -7.291666666666667vw 0; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon3 { background-position: -16.94444444444444vw 0; }
+  .flip-usage .f_container .h_disclaimer { left: 8.19444444444444vw; bottom: 3.472222222222222vw; font-size: 0.8333333333333333vw; }
+  .flip-connection .f_header { width: 50.83333333333333vw; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper { margin-top: 4.513888888888889vw; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper .btn { margin-right: 5.694444444444444vw; font-size: 1.25vw; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper .btn .btn-icon { width: 6.388888888888889vw; margin-bottom: 0.6944444444444444vw; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper .slide_description { font-size: 1.25vw; margin-top: 1.388888888888889vw; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper .slide_disclaimer { font-size: 0.8333333333333333vw; margin-top: 1.736111111111111vw; }
+  .flip-connection .f_header-type2 .h_inside { width: 42.63888888888889vw; margin-top: 2.430555555555556vw; }
+  .flip-connection .f_container { height: 48.61111111111111vw; margin-top: 0; }
+  .flip-connection .f_container .c_slide { width: 34.44444444444444vw; margin-left: 8.19444444444444vw; }
+  .flip-synchronization .f_container .c_btn-wrapper { margin-top: 5.208333333333333vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .btn { margin-left: 15.76388888888889vw; width: 5.069444444444444vw; height: 3.333333333333333vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .btn:before { width: 5.069444444444444vw; height: 3.333333333333333vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .btn-right { margin-top: 6.458333333333333vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave { width: 4.375vw; height: 5.277777777777778vw; top: 10.41666666666667vw; left: 18.05555555555556vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave.left { top: 0.6944444444444444vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave.right { top: 10.41666666666667vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave .pointer { width: 4.375vw; height: 5.277777777777778vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave .wavelength { width: 4.375vw; height: 5.416666666666667vw; }
+  .flip-presentation .f_header .h_inside { margin-top: 5.902777777777778vw; }
+  .flip-presentation .f_container .c_btn-wrapper { margin-top: 30.55555555555556vw; }
+  .flip-presentation .f_container .c_btn-wrapper .btn { font-size: 1.527777777777778vw; }
+  .flip-presentation .f_container .c_btn-wrapper .btn .btn-icon { width: 9.444444444444444vw; height: 9.444444444444444vw; margin-bottom: 0.6944444444444444vw; }
+  .flip-distribution .f_header { width: 32.77777777777778vw; margin-top: 17.36111111111111vw; margin-left: 9.722222222222222vw; }
+  .flip-distribution .f_container { width: 52.16197666437886vw; }
+  .flip-viewing .f_container .h_icon_wrapper { width: 50vw; bottom: 5.555555555555556vw; padding: 0 0 0 30px; }
+  .flip-viewing .f_container .h_icon_wrapper ul { margin: 0 2.430555555555556vw 0 0; }
+  .flip-viewing .f_container .h_icon_wrapper ul li .icon-img { width: 3.819444444444444vw; height: 4.583333333333333vw; margin: 0 0 0 0.4166666666666667vw; }
+  .flip-viewing .f_container .h_icon_wrapper ul li .icon2 { background-position: -4.305555555555556vw 0; }
+  .flip-viewing .f_container .h_icon_wrapper ul li .icon3 { background-position: -8.611111111111111vw 0; }
+  .flip-viewing .f_container .h_icon_wrapper .h_icon-tit { font-size: 2.222222222222222vw; }
+  .flip-viewing .f_container .h_icon_wrapper .icon-txt { font-size: 1.25vw; }
+  .flip-touch .f_container .i_feature { font-size: 1.527777777777778vw; margin: 0 auto 3.472222222222222vw; }
+  .flip-touch .f_container .i_feature .f_icon { width: 9.444444444444444vw; height: 9.444444444444444vw; }
+  .flip-touch .f_container .c_canvas .c_sequence { width: 80.27777777777778vw; }
+  .flip-touch .f_container .c_video video { width: auto; }
+  .flip-touch .f_container .c_image .pre_img { width: 1156px; margin: auto; }
+  .flip-design .f_header { padding-top: 5.902777777777778vw; }
+  .flip-design2 { padding-top: 5.902777777777778vw; }
+  .flip-design2 .f_container .c_inside { position: relative; width: 1440px; left: 50%; margin-left: -720px; }
+  .flip-solution .f_header { width: 39.44444444444444vw; margin-left: 9.72222222222222vw; }
+  .flip-solution .f_header .h_inside .icon { font-size: 1.25vw; }
+  .flip-solution .f_header .h_inside .icon i { width: 5.555555555555556vw; height: 5.555555555555556vw; }
+  .flip-solution .f_container { width: 40.97222222222222vw; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image { height: calc(50vw - 8.5px); }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature { width: 30.27777777777778vw; margin-top: 15.97222222222222vw; margin-left: 9.72222222222222vw; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature .f_icon { width: 11.11111111111111vw; height: 11.11111111111111vw; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature .f_tit { font-size: 2.777777777777778vw; margin-top: 1.041666666666667vw; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature .f_txt { font-size: 1.25vw; margin-top: 0.6944444444444444vw; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image .c_solution2_img3 { width: 50%; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_solution2-2 .wave { width: 17.84722222222222vw; height: 6.319444444444444vw; bottom: 3.125vw; left: 44.65277777777778vw; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_solution2-2 .wave .step { width: 18.26388888888889vw; height: 6.666666666666667vw; }
+  .flip-operation .f_container .c_icon_wrapper { padding: 3.472222222222222vw 0 0; }
+  .flip-operation .f_container .c_icon_wrapper .c_icon { height: 5.555555555555556vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon-img { width: 9.010416666666667vw; height: 6.25vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon-txt { padding: 0 0 0 1.388888888888889vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon_tit { font-size: 1.25vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon_text { font-size: 1.25vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon1 .icon-img { background-position: 0.8333333333333333vw 0; }
+  .flip-operation .f_container .c_icon_wrapper .icon2 .icon-img { background-position: -10.41666666666667vw 0; }
+  .flip-operation .f_container .c_icon_wrapper .icon3 .icon-img { background-position: -20.69444444444444vw 0; }
+  .flip-operation .f_container .c_icon_wrapper .icon4 .icon-img { background-position: -29.09722222222222vw 0; } }
+
+@media (max-width: 1156px) { .flip-touch .f_container .c_video img, .flip-touch .f_container .c_video video { width: 100%; }
+  .flip-touch .f_container .c_video .v_con { margin-left: -49.87057808455565vw; }
+  .flip-touch .f_container .c_image .pre_img { width: auto; }
+  .flip-operation .f_container .c_icon_wrapper { width: auto; } }
+
+@media (max-width: 1024px) { .s_key-visual .f_header .h_kv-bg1 { background: url(/assets/img/flip/flip_creativity_kv_bg-s2.jpg) no-repeat scroll center; background-size: cover; }
+  .s_key-visual .f_header .h_kv-bg2 { background: url(/assets/img/flip/flip_collaboration_kv_bg-s2.jpg) no-repeat scroll center; background-size: cover; }
+  .s_key-visual .f_header .h_kv-bg3 { background: url(/assets/img/flip/flip_innovation_kv_bg-s2.jpg) no-repeat scroll center; background-size: cover; }
+  .s_key-visual .f_header .h_inside .h_mask .mask-top { top: -6.647116324535679vw; height: 6.647116324535679vw; transform: translateY(6.54936vw); }
+  .s_key-visual .f_header .h_inside .h_mask .mask-right { width: 26.0019550342131vw; right: -26.0019550342131vw; transform: translateX(-25.9042vw); }
+  .s_key-visual .f_header .h_inside .h_mask .mask-bottom { bottom: -6.647116324535679vw; height: 6.647116324535679vw; transform: translateY(-6.54936vw); }
+  .s_key-visual .f_header .h_inside .h_mask .mask-left { width: 26.0019550342131vw; left: -26.0019550342131vw; transform: translateX(25.9042vw); }
+  .s_feature { margin-top: 8.308895405669599vw; }
+  .s_feature .f_header-type1 { width: 70.86999022482893vw; }
+  .s_feature .f_header-type2 { float: none; width: 70.86999022482893vw; margin: auto; text-align: center; }
+  .s_feature .h_inside .h_tit { font-size: 2.54154vw; }
+  .s_feature .h_inside .h_sub-tit { font-size: 5.4741vw; }
+  .s_feature .h_inside .h_description { font-size: 1.95503vw; }
+  .s_feature .h_inside .h_disclaimer { font-size: 1.17302vw; }
+  .s_feature .f_container .c_video .pre_img, .s_feature .f_container .c_video video { display: none !important; }
+  .s_feature .f_container .c_video .alt-image { display: block; }
+  .flip-navigation { height: auto; }
+  .flip-navigation .f_header { min-height: 27.34375vw; }
+  .flip-navigation .f_header .h_inside { position: relative; width: auto; margin-left: auto; margin-top: auto; }
+  .flip-navigation .f_container { background: none; float: none; height: auto; width: auto; margin-left: auto; }
+  .flip-navigation .f_container .c_slide { width: auto; margin-left: auto; margin-top: auto; }
+  .flip-navigation .slick-dots { width: 100%; padding-left: inherit; text-align: center; right: inherit; bottom: 0; position: relative; margin-top: 2.932551319648094vw; }
+  .flip-protection .f_header { min-height: 30.3030303030303vw; }
+  .flip-protection .f_container { height: 81.77663734115347vw; margin-bottom: 7.820136852394917vw; }
+  .flip-protection .f_container .c_btn-wrapper { margin-bottom: 4.887585532746823vw; }
+  .flip-protection .f_container .c_btn-wrapper .btn { font-size: 2.346041055718475vw; }
+  .flip-protection .f_container .c_btn-wrapper .btn .btn-icon { width: 13.29423264907136vw; height: 13.29423264907136vw; margin-bottom: 0.9765625vw; }
+  .flip-protection .slick-dots { margin: 2.932551319648094vw 0 6.842619745845552vw; }
+  .flip-usage .f_header .h_inside { position: relative; width: 70.86999022482893vw; margin-left: 0; }
+  .flip-usage .f_header .h_inside .h_sub-tit, .flip-usage .f_header .h_inside .h_description { padding: 0; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper { position: absolute; width: 41.015625vw; margin: 14.16015625vw 0 0 -8.30078125vw; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper .h_icon-tit { font-size: 3.125vw; text-align: left; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon-img { width: 13.671875vw; height: 8.3984375vw; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon-txt { font-size: 2.1484375vw; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon-txt span { display: block; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon1 { background-position: 3.41796875vw 0; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon2 { background-position: -12.890625vw 0; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon3 { background-position: -29.39453125vw 0; }
+  .flip-usage .f_container .h_disclaimer { font-size: 1.171875vw; left: 5.76171875vw; bottom: 25.1953125vw; }
+  .flip-connection { height: auto; }
+  .flip-connection .f_header .h_inside { width: auto; margin-top: auto; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper { min-height: 31.28054740957967vw; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper .btn { margin-right: 9.286412512218964vw; font-size: 2.150537634408602vw; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper .btn .btn-icon { width: 10.75268817204301vw; height: 10.75268817204301vw; margin-bottom: 0.9765625vw; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper .slide_description { font-size: 1.759530791788856vw; margin-top: 3.421309872922776vw; }
+  .flip-connection .f_container { float: none; height: 51.80840664711632vw; }
+  .flip-connection .f_container .c_slide { width: auto; margin-left: auto; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave { left: 16.6177908113392vw; width: 6.158357771260997vw; height: 7.429130009775171vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave.left { top: 0; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave.right { top: 9.775171065493646vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave .pointer, .flip-synchronization .f_container .c_btn-wrapper .touch-wave .wavelength { width: 6.158357771260997vw; height: 7.6171875vw; }
+  .flip-presentation .f_header .h_inside { margin-top: 8.308895405669599vw; }
+  .flip-presentation .f_container .c_btn-wrapper { margin-top: 44.37927663734115vw; }
+  .flip-presentation .f_container .c_btn-wrapper .btn { font-size: 2.346041055718475vw; }
+  .flip-presentation .f_container .c_btn-wrapper .btn .btn-icon { width: 13.29423264907136vw; height: 13.29423264907136vw; margin-bottom: 0.9765625vw; }
+  .flip-distribution .f_header { margin-top: 8.308895405669599vw; }
+  .flip-distribution .f_container { width: auto; }
+  .flip-viewing .f_container .h_icon_wrapper { width: 60.546875vw; padding: 0; }
+  .flip-viewing .f_container .h_icon_wrapper .h_icon-tit { font-size: 2.734375vw; line-height: 1; }
+  .flip-viewing .f_container .h_icon_wrapper .icon-txt { font-size: 1.7578125vw; }
+  .flip-viewing .f_container .h_icon_wrapper ul li .icon-img { width: 4.19921875vw; height: 4.98046875vw; margin: 0 0 0 0.5859375vw; }
+  .flip-viewing .f_container .h_icon_wrapper ul li .icon2 { background-position: -4.78515625vw 0; }
+  .flip-viewing .f_container .h_icon_wrapper ul li .icon3 { background-position: -9.5703125vw 0; }
+  .flip-touch .f_container .i_feature { font-size: 2.346041055718475vw; margin: 0 auto 5.865102639296188vw; }
+  .flip-touch .f_container .i_feature .f_icon { width: 13.3919843597263vw; height: 13.3919843597263vw; }
+  .flip-touch .f_container .c_image { width: 95.30791788856305vw; margin: auto; }
+  .flip-touch .f_container .c_canvas .c_sequence { width: 95.30791788856305%; }
+  .flip-touch .f_container .c_video .alt-image { position: relative; left: inherit; }
+  .flip-design .f_header { padding-top: 8.308895405669599vw; }
+  .flip-design2 { padding-top: 8.308895405669599vw; }
+  .flip-design2 .f_container { height: auto !important; }
+  .flip-design2 .f_container .c_inside { display: none; }
+  .flip-design2 .f_container .c_slide { display: block; }
+  .flip-design2 .f_container .c_slide .c_image { display: block; }
+  .flip-design2 .f_container .c_slide .slick-dots { position: relative; padding: 2.932551319648094vw 0 0; }
+  .flip-design2 .f_container .c_slide .slick-dots li button { background: #F0F0F0; }
+  .flip-design2 .f_container .c_slide .slick-dots li.slick-active button { background: #000; }
+  .flip-design2 .f_container .paging { display: none; }
+  .flip-display .f_header .h_inside { margin-top: 8.308895405669599vw; }
+  .flip-solution { padding-top: 8.308895405669599vw; }
+  .flip-solution .f_header .h_inside .icon { position: absolute; left: 60.60606060606061vw; bottom: 7.820136852394917vw; font-size: 2.346041055718475vw; }
+  .flip-solution .f_header .h_inside .icon i { width: 8.602150537634409vw; height: 8.602150537634409vw; background: url(/assets/img/flip/flip_solution_icon-s2.png) no-repeat scroll center; background-size: contain; }
+  .flip-solution .f_container { width: 37.14565004887586vw; float: none; margin-left: 22.48289345063539vw; padding-bottom: 7.820136852394917vw; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature { width: 38.12316715542522vw; margin-top: 10.65493646138807vw; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature .f_icon { width: 15.64027370478983vw; height: 15.64027370478983vw; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature .f_tit { font-size: 3.910068426197458vw; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature .f_txt { font-size: 1.955034213098729vw; }
+  .flip-solution2 .slick-dots { margin: 2.932551319648094vw 0 6.842619745845552vw; }
+  .flip-operation .f_container .c_icon_wrapper { width: 95.3125vw; padding: 4.8828125vw 2.9296875vw 0; box-sizing: border-box; }
+  .flip-operation .f_container .c_icon_wrapper .c_icon { width: 47%; }
+  .flip-operation .f_container .c_icon_wrapper .icon-img { width: 9.66796875vw; height: 8.59375vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon_tit { font-size: 1.7578125vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon_tit span { font-size: 1.5625vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon1 .icon-img { background-position: 0 0; }
+  .flip-operation .f_container .c_icon_wrapper .icon2 .icon-img { background-position: -15.72265625vw 0; }
+  .flip-operation .f_container .c_icon_wrapper .icon3 { margin: 10.7421875vw 0 0; }
+  .flip-operation .f_container .c_icon_wrapper .icon3 .icon-img { background-position: -29.58984375vw 0; }
+  .flip-operation .f_container .c_icon_wrapper .icon4 { margin: 10.7421875vw 0 0; }
+  .flip-operation .f_container .c_icon_wrapper .icon4 .icon-img { background-position: -41.2109375vw 0; } }
+
+@media (max-width: 720px) { .flip-menu { padding-top: 13.75vw; }
+  .flip-menu .static-menu { display: none; }
+  .flip-menu .sticky-menu { top: 0; margin-top: 0; width: 100%; line-height: 13.75vw; box-sizing: border-box; position: absolute; }
+  .flip-menu .sticky-menu ul li { float: left; width: 33.33333%; border-right: 1px solid #3c3c3c; border-bottom: 0; }
+  .flip-menu .sticky-menu ul li .n_icon { width: 4.861111111111111vw; height: 4.861111111111111vw; margin-right: 1.388888888888889vw; }
+  .flip-menu .sticky-menu ul li a { font-size: 3.333333333333333vw; height: auto; }
+  .flip-menu .sticky-menu ul li a span { text-indent: 0; }
+  .flip-menu .sticky-menu ul li a:hover { color: #a6a6a6; }
+  .flip-menu .sticky-menu ul li a:hover .n_creativity-icon { background: url(/assets/img/flip/menu-icon1-off.png) no-repeat scroll center; background-size: contain; }
+  .flip-menu .sticky-menu ul li a:hover .n_collaboration-icon { background: url(/assets/img/flip/menu-icon2-off.png) no-repeat scroll center; background-size: contain; }
+  .flip-menu .sticky-menu ul li a:hover .n_innovation-icon { background: url(/assets/img/flip/menu-icon3-off.png) no-repeat scroll center; background-size: contain; }
+  .flip-menu .sticky-menu ul .n_innovation { border-right: 0; }
+  .flip-menu .sticky-menu.fixed { position: fixed; }
+  .s_key-visual .f_header .h_inside { height: 70.83333333333333vw; }
+  .s_key-visual .f_header .h_inside .h_tit { font-size: 12.22222vw; padding-top: 27.77777777777778vw; }
+  .s_key-visual .f_header .h_inside .h_mask .mask-top { top: -9.444444444444444vw; height: 9.444444444444444vw; transform: translateY(9.30556vw); }
+  .s_key-visual .f_header .h_inside .h_mask .mask-right { width: 36.94444444444444vw; right: -36.94444444444444vw; transform: translateX(-36.80556vw); }
+  .s_key-visual .f_header .h_inside .h_mask .mask-bottom { bottom: -9.444444444444444vw; height: 9.444444444444444vw; transform: translateY(-9.30556vw); }
+  .s_key-visual .f_header .h_inside .h_mask .mask-left { width: 36.94444444444444vw; left: -36.94444444444444vw; transform: translateX(36.80556vw); }
+  .s_key-visual .f_header .h_kv-bg1 { background: url(/assets/img/flip/flip_creativity_kv_bg-s3.jpg) no-repeat; background-size: cover; }
+  .s_key-visual .f_header .h_kv-bg2 { background: url(/assets/img/flip/flip_collaboration_kv_bg-s3.jpg) no-repeat; background-size: cover; }
+  .s_key-visual .f_header .h_kv-bg2 .h_tit { padding-top: 20.13888888888889vw; }
+  .s_key-visual .f_header .h_kv-bg3 { background: url(/assets/img/flip/flip_innovation_kv_bg-s3.jpg) no-repeat; background-size: cover; }
+  .s_feature { margin-top: 18.75vw; }
+  .s_feature .f_header { width: 91.11111111111111vw; }
+  .s_feature .h_inside .h_tit { font-size: 4.44444vw; }
+  .s_feature .h_inside .h_sub-tit { font-size: 9.16667vw; margin-top: 2.777777777777778vw; }
+  .s_feature .h_inside .h_description { font-size: 3.88889vw; margin-top: 2.777777777777778vw; }
+  .s_feature .h_inside .h_disclaimer { font-size: 2.77778vw; line-height: 1.25; }
+  .s_feature .f_container { margin-top: 8.333333333333333vw; }
+  .flip-navigation .f_header .h_inside { min-height: 76.38888888888889vw; }
+  .flip-protection .f_header { min-height: 31.94444444444444vw; }
+  .flip-protection .f_container { height: 94.86111111111111vw; margin-bottom: 14.58333333333333vw; }
+  .flip-protection .f_container .c_btn-wrapper { margin-bottom: 6.944444444444444vw; }
+  .flip-protection .f_container .c_btn-wrapper .btn { font-size: 3.888888888888889vw; }
+  .flip-protection .f_container .c_btn-wrapper .btn .btn-icon { width: 18.88888888888889vw; height: 18.88888888888889vw; margin-bottom: 1.388888888888889vw; }
+  .flip-usage .f_header .h_inside { width: auto; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper { width: auto; position: relative; margin: 9.722222222222222vw 0 0; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper .h_icon-tit { font-size: 5.555555555555556vw; text-align: center; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul { padding: 0 4.861111111111111vw; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon-img { width: 27.13vw; height: 13.05555555555556vw; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon-txt { font-size: 4.166666666666667vw; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon1 { background-position: 8.333333333333333vw 0; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon2 { background-position: -17.08333333333333vw 0; }
+  .flip-usage .f_header .h_inside .h_icon_wrapper ul li .icon3 { background-position: -42.63888888888889vw 0; }
+  .flip-usage .f_container .h_disclaimer { font-size: 2.777777777777778vw; bottom: 2.777777777777778vw; text-align: center; line-height: 1.25; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper { min-height: 51.38888888888889vw; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper .slide_description { font-size: 3.888888888888889vw; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper .slide_disclaimer { font-size: 2.777777777777778vw; }
+  .flip-connection .f_header .h_inside .h_btn-wrapper .btn .btn-icon { margin-bottom: 1.388888888888889vw; }
+  .flip-connection .f_container { height: 82.5vw; }
+  .flip-synchronization .f_container .c_btn-wrapper { margin-top: 6.25vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .btn { margin-left: 8.472222222222222vw; width: 6.111111111111111vw; height: 4.166666666666667vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .btn .btn-icon { width: 6.111111111111111vw; height: 4.166666666666667vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .btn-right { margin-top: 7.916666666666667vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave { left: 9.027777777777778vw; width: 8.75vw; height: 10.55555555555556vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave.left { top: -1.388888888888889vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave.right { top: 10.41666666666667vw; }
+  .flip-synchronization .f_container .c_btn-wrapper .touch-wave .pointer, .flip-synchronization .f_container .c_btn-wrapper .touch-wave .wavelength { width: 8.75vw; height: 10.83333333333333vw; }
+  .flip-distribution .f_header { margin-top: 18.75vw; }
+  .flip-viewing .f_container .h_icon_wrapper { width: auto; position: relative; bottom: inherit; margin: 0 0 6.944444444444444vw; }
+  .flip-viewing .f_container .h_icon_wrapper .h_icon-header { text-align: center; }
+  .flip-viewing .f_container .h_icon_wrapper .h_icon-tit { font-size: 5.555555555555556vw; }
+  .flip-viewing .f_container .h_icon_wrapper .icon-txt { font-size: 3.888888888888889vw; }
+  .flip-viewing .f_container .h_icon_wrapper ul { float: none; width: 28.75vw; margin: 0 auto 4.166666666666667vw; }
+  .flip-viewing .f_container .h_icon_wrapper ul li .icon-img { width: 7.638888888888889vw; height: 9.027777777777778vw; margin: 0 0 0 2.916666666666667vw; }
+  .flip-viewing .f_container .h_icon_wrapper ul li .icon1 { margin: 0; }
+  .flip-viewing .f_container .h_icon_wrapper ul li .icon2 { background-position: -8.472222222222222vw 0; }
+  .flip-viewing .f_container .h_icon_wrapper ul li .icon3 { background-position: -16.80555555555556vw 0; }
+  .flip-presentation .f_header .h_inside { margin-top: 18.75vw; }
+  .flip-presentation .f_container .c_btn-wrapper { margin-top: 105.2777777777778vw; }
+  .flip-presentation .f_container .c_btn-wrapper .btn { font-size: 3.888888888888889vw; }
+  .flip-presentation .f_container .c_btn-wrapper .btn .btn-icon { width: 18.88888888888889vw; height: 18.88888888888889vw; margin-bottom: 1.388888888888889vw; }
+  .flip-touch .f_container .i_feature { width: 165px; font-size: 4.166666666666667vw; margin: 0 auto 6.944444444444444vw; }
+  .flip-touch .f_container .i_feature .f_icon { width: 18.88888888888889vw; height: 18.88888888888889vw; }
+  .flip-touch .f_container .c_image { width: 100%; }
+  .flip-design { margin-top: 9.722222222222222vw; }
+  .flip-design .f_header { padding-top: 18.75vw; }
+  .flip-design2 { padding-top: 18.75vw; margin-top: 9.027777777777778vw; }
+  .flip-display .f_header .h_inside { margin-top: 18.75vw; }
+  .flip-solution { padding-top: 18.75vw; }
+  .flip-solution .f_header .h_inside .icon { position: relative; left: auto; bottom: auto; font-size: 3.888888888888889vw; margin-top: 9.027777777777778vw; }
+  .flip-solution .f_header .h_inside .icon i { width: 11.11111111111111vw; height: 11.11111111111111vw; background: url(/assets/img/flip/flip_solution_icon.png) no-repeat scroll center; background-size: contain; }
+  .flip-solution .f_container { width: 81.94444444444444vw; margin-left: auto; margin-right: auto; }
+  .flip-solution2 .f_container .c_inner_feature { display: block; text-align: center; width: 91.11111111111111vw; margin: 0 auto 8.333333333333333vw; }
+  .flip-solution2 .f_container .c_inner_feature .f_icon { display: block; width: 22.22222222222222vw; height: 22.22222222222222vw; text-indent: -99999px; overflow: hidden; margin: auto; }
+  .flip-solution2 .f_container .c_inner_feature .f_tit { font-family: "SamsungOne"; font-size: 5.555555555555556vw; font-weight: 700; margin-top: 15px; }
+  .flip-solution2 .f_container .c_inner_feature .f_txt { font-family: "SamsungOne"; font-size: 3.888888888888889vw; font-weight: 400; line-height: 1.5; margin-top: 10px; color: #363636; }
+  .flip-solution2 .f_container .c_inner_feature .hall i { background: url(/assets/img/flip/flip_solution2_icon1-s3.png) no-repeat scroll center; background-size: contain; }
+  .flip-solution2 .f_container .c_inner_feature .proximity i { background: url(/assets/img/flip/flip_solution2_icon2-s3.png) no-repeat scroll center; background-size: contain; }
+  .flip-solution2 .f_container .c_inner_feature .accelerometer i { background: url(/assets/img/flip/flip_solution2_icon3-s3.png) no-repeat scroll center; background-size: contain; }
+  .flip-solution2 .f_container .c_inner_feature .i_feature { display: none; }
+  .flip-solution2 .f_container .c_inner_feature .i_feature:first-child { display: block; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image .i_feature { display: none; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_image.c_solution2-3 .sq_figure img { width: 50%; right: 25%; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_solution2-2 .wave { left: 23.61111111111111vw; bottom: 5.833333333333333vw; }
+  .flip-solution2 .f_container .c_slide .slide_inside .c_solution2-3 { text-align: center; }
+  .flip-operation .f_container { padding: 0 0 13.88888888888889vw; }
+  .flip-operation .f_container .c_icon_wrapper { width: 91.11111111111111vw; text-align: center; padding: 0 1.388888888888889vw; }
+  .flip-operation .f_container .c_icon_wrapper .c_icon { width: auto; float: none; display: inline-block; height: auto; margin: 0 0 10.41666666666667vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon-img { display: inline-block; width: 13.75vw; height: 12.22222222222222vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon-txt { display: inline-block; text-align: left; }
+  .flip-operation .f_container .c_icon_wrapper .icon_tit { font-size: 4.444444444444444vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon_tit span { font-size: 3.333333333333333vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon_text { font-size: 3.888888888888889vw; }
+  .flip-operation .f_container .c_icon_wrapper .icon2 .icon-img { background-position: -22.22222222222222vw 0; }
+  .flip-operation .f_container .c_icon_wrapper .icon3 .icon-img { background-position: -41.94444444444444vw 0; }
+  .flip-operation .f_container .c_icon_wrapper .icon4 { margin: 0; }
+  .flip-operation .f_container .c_icon_wrapper .icon4 .icon-img { background-position: -58.4vw 0; }
+  .slick-dots li { margin: 0 0.6944444444444444vw; }
+  .slick-dots li button { width: 2.5vw; height: 2.5vw; } }
+
+.ie8 .s_feature .f_container .c_video .alt-image { display: block; }
+
+.ie8 .s_feature .f_container .c_video video, .ie8 .s_feature .f_container .c_video .pre_img { display: none; }
+
+.ie8 .s_feature .f_container .c_canvas { display: none; }
+
+.ie8 .flip-touch .f_container .c_image .alt-image { margin: auto; }
+
+.ie8 .flip-navigation .f_container { background: none; }
+
+.ie8 .flip-distribution .f_container .c_image:first-child { z-index: -1; }
+
+.ie8 .flip-synchronization .f_container .c_btn-wrapper .btn { opacity: 0; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); }
+
+.ie8 .flip-touch .f_container .c_image { display: block; text-align: center; }
+
+.ie8 .flip-design2 .f_container { height: auto !important; }
+
+.ie8 .flip-design2 .f_container .c_image { display: block; }
+
+.ie8 .flip-design2 .f_container .c_inside { display: none; }
+
+.ie8 .flip-design2 .f_container .c_slide { display: block; }
+
+.ie8 .flip-design2 .f_container .c_slide .slick-dots { position: relative; bottom: 0; margin-top: 35px; }
+
+.ie8 .flip-design2 .f_container .paging { display: none; }

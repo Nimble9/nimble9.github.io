@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: page
 title: odyssey
 permalink: /src/2017/odyssey/
 tags: tag4

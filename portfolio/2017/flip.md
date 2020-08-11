@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: page
 title: flip
 permalink: /src/2017/flip/
 tags: tag4
