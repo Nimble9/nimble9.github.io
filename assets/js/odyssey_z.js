@@ -198,11 +198,12 @@ crossBrowsingEvent(function() {
                 return result;
             };
             ScrollSpot.prototype.elBottom = function (elem) {
-                var $el = $(elem), $top = $el.offset().top, $height = $el.find(".f_container").height(), result = $top + $height - ($window.height() / 1.2);
+                var $el = $(elem), $top = $el.offset().top, $height = $el.find(".f_container").height(), result = $top + $height - innerHeight;
                 return result;
             };
             ScrollSpot.prototype.start = function () {
-                var $windowH = $window.height();
+                // var $windowH = $window.height();
+                var $windowH = innerHeight;
                 if (this.st > this.elBottom(this.el) && this.st < this.elBottom(this.el) + $windowH) {
                     this.add(this.el);
                 }
@@ -859,8 +860,9 @@ crossBrowsingEvent(function() {
                     var scrolled_seamless = new ScrollSpot($st, $seamless, function (el) {
                         el.find(".t_content").addClass("active");
                         var $img = $seamless.find(".c_image");
+                        console.log($st);
                         // let seamless_count = [{count: 10}, {count: 20}];
-                        if (el.find(".t_content").hasClass("active") && f_seamless.trigger) {
+                        if(el.find(".t_content").hasClass("active") && f_seamless.trigger) {
                             if ($(".c_seq.slick-active").index() === 0) {
                                 if ($img.hasClass("active")) {
                                     var car1 = new SeamlessVisuals(f_seamless.car[0], f_seamless.init, f_seamless.max, 200, false);
@@ -873,8 +875,7 @@ crossBrowsingEvent(function() {
                             }
                             f_seamless.trigger = false;
                         }
-                    }, function (el) {
-                    });
+                    }, function (el) {});
                     scrolled_seamless.start();
                 }
             };
@@ -1142,9 +1143,10 @@ crossBrowsingEvent(function() {
                 f_keyboard.click();
                 f_hotKey.click();
                 f_display.click();
+
                 $window.scroll(function () {
                     // didScroll = true;
-                    $st = ($(this).scrollTop() || $("body").scrollTop());
+                    $st = document.body.scrollTop || document.documentElement.scrollTop;
                     f_kv.scroll();
                     f_design.scroll();
                     f_optimized.scroll();
