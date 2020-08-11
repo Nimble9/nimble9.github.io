@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 {% if page.title %}
 <title style="text-transform: uppercase">{{ page.title }}</title>
-<link rel="stylesheet" type="text/css" href="/assets/css/page.css">
+<link rel="stylesheet" type="text/css" href="/assets/lib/page.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/{{ page.title }}.css">
 {% endif %}
 
@@ -25,11 +25,11 @@
 {{ content }}
 
 
-<script type="text/javascript" src="/assets/lib/jquery/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/assets/lib/page.js"></script>
 {% if page.add-on %}
 <script type="text/javascript" src="/assets/js/{{ page.add-on }}-add.js"></script>
 {% endif %}
-<script type="text/javascript" src="/assets/lib/slick/slick-1.8.1/slick.min.js"></script>
+<!--<script type="text/javascript" src="/assets/lib/slick/slick-1.8.1/slick.min.js"></script>-->
 <script type="text/javascript" src="/assets/js/{{ page.title }}.js"></script>
 
 <!-- <link rel="stylesheet" type="text/css" href="http://cdn.samsung.com/etc/designs/smg/{Country Code}/css/{Country Code}.css"> -->
