@@ -313,8 +313,9 @@ ul.topbar {
 		//font-size: 28px;
 	}
 	 > p {
-		 text-align: center;
+		 text-align: left;
 		 margin: 20px 0 30px;
+
 		a {
 
 			//text-decoration: none;
@@ -368,7 +369,8 @@ ul.topbar {
 }
 .about {
 	margin-top: 20px;
-
+	padding: 0 10px;
+	line-height: 1.4;
 	i {
 		font-style: italic;
 	}
