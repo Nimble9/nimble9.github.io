@@ -313,7 +313,7 @@ ul.topbar {
 		//font-size: 28px;
 	}
 	 > p {
-		 text-align: left;
+		 text-align: center;
 		 margin: 20px 0 30px;
 
 		a {
@@ -365,12 +365,14 @@ ul.topbar {
 		width: 75%;
 		border: 1px solid #000;
 		padding: 5px;
+		line-height: 1.4;
 	}
 }
 .about {
 	margin-top: 20px;
 	padding: 0 10px;
-	line-height: 1.4;
+	line-height: 1.5 !important;
+	text-align: left !important;
 	i {
 		font-style: italic;
 	}
@@ -512,6 +514,16 @@ ul.topbar {
 		.left {
 			width: 35.7%;
 		}
+	}
+
+	.intro-wrapper {
+		display: block;
+	}
+	.intro-wrapper .character {
+		text-align: center;
+	}
+	.intro-wrapper .intro {
+		padding: 0 20px 20px;
 	}
 }
 @media only screen and (max-width: 520px) {
