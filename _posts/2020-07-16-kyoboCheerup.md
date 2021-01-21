@@ -3,7 +3,7 @@ layout: default
 tag: 
 title: Kyobo-cheerup
 permalink: /portfolio/2020/kyobo/cheerup/
-tags: tag1
+tags: 
 ---
 # 힘내요! 3040! 이벤트!
 > **클라이언트 :** kyobo   
