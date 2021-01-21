@@ -1,6 +1,6 @@
 ---
 layout: default
-tag: tag1
+tag: 
 title: Kyobo-cheerup
 permalink: /portfolio/2020/kyobo/cheerup/
 tags: tag1
